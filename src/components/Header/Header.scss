@@ -1,0 +1,189 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+
+
+.line{
+    width: 100%;
+    height: 5px;
+    background: #B80818;
+    position: relative;
+    z-index: 2;
+}
+
+header{
+    background: $color-header;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+}
+.menu{
+  display: flex;
+}
+
+.menu ul{
+  display: flex;
+  margin: 0 20px;
+  font-family: Roboto;
+}
+li{
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+a{
+  transition: all 0.3s ease-in-out;
+}
+.menu ul li:hover{
+  color: #009247;
+}
+.menu ul li a:hover{
+  color: #009247;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  width: 310px;
+  font-family: Roboto;
+
+}
+.buttons .btnRequests{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 45px;
+  transition: all 0.3s ease-in-out;
+}
+.buttons .btnRequests:hover{
+    transform: translateY(3px);
+    box-shadow: none;
+    background: $color-header;
+    color: $color-text;
+}
+.buttons .btnRequests:active{
+  opacity: 0.5;
+}
+
+.buttons .btnContact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 45px;
+  background: $color-primary;
+  color: $color-secondary;
+  transition: all 0.3s ease-in-out;
+}
+.buttons .btnContact p{
+  font-size: 9px;
+  text-align: left;
+}
+.buttons .btnContact:hover{
+    transform: translateY(3px);
+    box-shadow: none;
+}
+.buttons .btnContact:active{
+  opacity: 0.5;
+}
+
+.hamburger{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      margin-top: 12px;
+      margin-left: 20px;
+}
+.green{
+    background: $color-third;
+    height: 5px;
+    border-radius: 20px;
+}
+.white{
+    background: $color-secondary;
+    height: 5px;
+    margin: 5px 0;
+    border-radius: 20px;
+}
+.red{
+    background: $color-primary;
+    height: 5px;
+    border-radius: 20px;
+}
+
+.hamburger.active{
+  transform: rotate(0deg);
+}
+
+.hamburger.active div:nth-child(1){
+  transform: translateY(8px) rotate(-45deg);
+}
+
+.hamburger.active div:nth-child(2){
+  opacity: 0;
+}
+.hamburger.active div:nth-child(3){
+  transform: translateY(-12px) rotate(45deg);
+}
+.hamburger div{
+  display: block;
+  width: 100%;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.icon-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detailsItems{
+  position: absolute;
+  top: 80px;
+  background: $color-secondary;
+  border-radius: 10px;
+  min-height: 130px;
+  min-width: 200px;
+  padding: 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.404) 0 0 8px;
+}
+summary{
+  margin-right: 5px;
+  transition: all 0.3s ease-in-out;
+}
+summary:hover{
+  color: #009247
+}
+.detailsItems li{
+  margin: 10px 0;
+}
+summary::marker{
+    color: $color-primary;
+}
+.drinkItems li{
+  margin-left: 40px;
+  list-style: circle;
+}
+
+@media (max-width: 870px){
+    .menu,
+    .buttons{
+      display: none;
+    }
+    header{
+      justify-content: space-between;
+    }
+}
+
+@media (min-width: 871px){
+    .icon-menu{
+      display: none;
+    }
+}
