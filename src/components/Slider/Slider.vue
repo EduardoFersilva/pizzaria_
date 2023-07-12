@@ -1,4 +1,5 @@
 <template>
+  <div class="contt">
   <main>
     <h2>{{ title }}</h2>
     <div ref="container" class="keen-slider">
@@ -10,6 +11,12 @@
       </div>
     </div>
   </main>
+    <button class="btnSeeMenu">
+    <span>VER CARDÁPIO COMPLETO</span>
+    <i class="bi bi-arrow-right"></i>
+    </button>
+    <p class="pSeeMenu">São mais de 80 sabores!</p>
+    </div>
 </template>
 
 <script>

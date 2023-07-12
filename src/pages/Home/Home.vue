@@ -1,7 +1,7 @@
 <template>
   <main>
     <banner
-      imageUrl="../../src/assets/images/Img-Pizza-Banner.png"
+      imageUrl="./imgs/Img-Pizza-Banner.png"
       title="Novidade"
       subtitle="BACK BACON"
       description="Generosas fatias de back bacon defumado e queijo derretido sobre a massa crocante,
@@ -34,42 +34,42 @@ export default {
         {
           productName: 'Muzzarela de Búfala',
           price: '65',
-          image: '../../src/assets/images/Img-Pizza-Card1.png',
+          image: './imgs/Img-Pizza-Card1.png',
           actionUrl: '/#/cardapio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
           productName: 'Super Premium',
           price: '75.5',
-          image: '../../src/assets/images/Img-Pizza-Card2.png',
+          image: './imgs/Img-Pizza-Card2.png',
           actionUrl: '/#/cardapio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
           productName: 'Super Premium',
           price: '75.69',
-          image: '../../src/assets/images/Img-Pizza-Card3.png',
+          image: './imgs/Img-Pizza-Card3.png',
           actionUrl: '/#/cardapio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
           productName: 'Caprici',
           price: '49.99',
-          image: '../../src/assets/images/Img-Pizza-Card4.png',
+          image: './imgs/Img-Pizza-Card4.png',
           actionUrl: '/#/cardapio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
           productName: 'Muzzarela de Búfala',
           price: '65.15',
-          image: '../../src/assets/images/Img-Pizza-Card1.png',
+          image: './imgs/Img-Pizza-Card1.png',
           actionUrl: '/#/cardapio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
           productName: 'Muzzarela de Búfala',
           price: '65.15',
-          image: '../../src/assets/images/Img-Pizza-Card2.png',
+          image: './imgs/Img-Pizza-Card2.png',
           actionUrl: '/#/cardapio-unico',
           actionLabel: 'FAZER PEDIDO!'
         }

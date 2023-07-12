@@ -40,7 +40,7 @@ defineProps({
     <header>
         <router-link to="/">
             <logo
-            image="../src/assets/images/logo.png"
+            image="./imgs/logo.png"
             alt-image="Senhora Pizza"
             />
         </router-link>
@@ -51,8 +51,11 @@ defineProps({
         <details>
           <summary>{{menu1}}</summary>
           <div class="detailsItems">
-            <li><router-link to="/pizzas-salgadas">Pizzas Salgadas</router-link></li>
-            <li><router-link to="/pizzas-doces">Pizzas Doces</router-link></li>
+            <details>
+              <summary>Pizzas</summary>
+                <li><router-link to="/pizzas-salgadas">Pizzas Salgadas</router-link></li>
+                <li><router-link to="/pizzas-doces">Pizzas Doces</router-link></li>
+            </details>
             <details class="drinkItems">
               <summary>Bebidas</summary>
               <li><router-link to="/refrigerantes">Refrigerantes</router-link></li>

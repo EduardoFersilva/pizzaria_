@@ -36,10 +36,13 @@ defineProps({
     <ul class="menu">
       <details class="menuAll">
         <summary class="pMenu">Cardápio</summary>
-        <li><a href="/#/pizzas-salgadas" @click="$emit('close')">{{subMenu1}}</a></li>
-        <li><a href="/#/pizzas-doces" @click="$emit('close')">{{subMenu2}}</a></li>
+        <details>
+          <summary class="summaryPizzas">Pizzas</summary>
+            <li><a href="/#/pizzas-salgadas" @click="$emit('close')">{{subMenu1}}</a></li>
+            <li><a href="/#/pizzas-doces" @click="$emit('close')">{{subMenu2}}</a></li>
+        </details>
         <details class="ulBebidas">
-          <summary class="pDrink">Bebidas</summary>
+          <summary class="summaryDrink">Bebidas</summary>
               <li><router-link to="/refrigerantes" @click="$emit('close')">Refrigerantes</router-link></li>
               <li><router-link to="/cervejas" @click="$emit('close')">Cervejas</router-link></li>
               <li><router-link to="/sucos" @click="$emit('close')">Sucos</router-link></li>

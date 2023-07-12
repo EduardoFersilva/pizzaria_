@@ -9,7 +9,7 @@ main{
 main .firstLayer{
     width: 100%;
     height: 600px;
-    background-image: url('../../assets/images/Img-Banner.jpeg');
+    background-image: url('../../public/imgs/Img-Banner.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.9;
@@ -48,15 +48,13 @@ main .secondLayer img{
     letter-spacing: 0em;
 }
 .contBanner h2{
-    font-family: Roboto;
-    -webkit-text-stroke-width: 1.3px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
     color: transparent;
-    font-size: 48px;
+    font-style: normal;
     font-weight: 700;
-    line-height: 56px;
-    letter-spacing: 0em;
-    text-align: center;
+    font-size: 48px;
 }
 .contBanner p{
     font-family: Roboto;
@@ -66,7 +64,7 @@ main .secondLayer img{
     letter-spacing: 0em;
     text-align: center;
     color: $color-secondary;
-    width: 85%;
+    width: 90%;
     margin: 10px 0
 }
 .btnAction{
@@ -80,15 +78,20 @@ main .secondLayer img{
   opacity: 0.5;
 }
 .contBanner .iconVideo{
-    width: 190px;
+    width: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 30px 0;
+    margin: 30px 0 30px 10px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 20px 30px -6px rgba(255, 255, 255, 0.163);
+    border-radius: 50px;
+    padding: 5px;
     transition: all 0.3s ease-in-out;
 }
 .contBanner .iconVideo:hover{
     transform: translateY(3px);
+    box-shadow: none;
 }
 .contBanner .iconVideo p{
     font-family: Roboto;
@@ -117,9 +120,6 @@ main .secondLayer img{
     .contBanner .iconVideo p{
         margin-left: 10px;
     }
-    .contBanner .iconVideo {
-        margin-left: 10px;
-    }
     .contVideo{
         display: flex;
         justify-content: center;
@@ -127,5 +127,17 @@ main .secondLayer img{
     }
     .btnAction{
         margin: 0 !important;
+    }
+
+}
+@media (max-width: 870px) {
+    .contBanner .iconVideo{
+        margin: 30px 0 30px 0px;
+    }
+    .contBanner .iconVideo{
+        box-shadow: none;
+    }
+    .btnAction{
+        box-shadow: none;
     }
 }

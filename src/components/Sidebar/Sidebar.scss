@@ -27,7 +27,7 @@
     flex-direction: column;
     padding: 10px;
     min-width: 170px;
-    min-height: 190px;
+    min-height: 150px;
     background: $color-secondary;
     border-radius: 10px;
     top: 90px;
@@ -36,9 +36,8 @@
     font-family: Roboto;
 }
 .menu{
-    margin-top: 35px;
+    padding-top: 10px;
 }
-
 ul li {
     margin: 15px 0;
     cursor: pointer;
@@ -49,10 +48,13 @@ ul li {
 }
 .ulBebidas li {
     margin-left: 40px;
-    list-style: disc;
+    list-style: circle;
 }
 summary::marker{
     color: $color-primary;
+}
+.summaryPizzas, .summaryDrink{
+    margin:10px 0 0 20px
 }
 
 

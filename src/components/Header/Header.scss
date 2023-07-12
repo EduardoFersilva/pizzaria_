@@ -28,7 +28,7 @@ header{
 
 .menu ul{
   display: flex;
-  margin: 0 20px;
+  margin: 0 40px;
   font-family: Roboto;
 }
 li{
@@ -147,11 +147,14 @@ a{
 }
 .detailsItems{
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
   top: 80px;
   background: $color-secondary;
   border-radius: 10px;
-  min-height: 130px;
-  min-width: 200px;
+  min-height: 80px;
+  min-width: 150px;
   padding: 10px 20px;
   box-shadow: rgba(0, 0, 0, 0.404) 0 0 8px;
 }
@@ -162,18 +165,20 @@ summary{
 summary:hover{
   color: #009247
 }
+.drinkSummary{
+  margin-top: 10px;
+}
 .detailsItems li{
   margin: 10px 0;
 }
 summary::marker{
     color: $color-primary;
 }
-.drinkItems li{
-  margin-left: 40px;
-  list-style: circle;
+.drinkItems summary{
+  margin-top: 10px;
 }
 
-@media (max-width: 870px){
+@media (max-width: 895px){
     .menu,
     .buttons{
       display: none;
@@ -183,7 +188,7 @@ summary::marker{
     }
 }
 
-@media (min-width: 871px){
+@media (min-width: 896px){
     .icon-menu{
       display: none;
     }
