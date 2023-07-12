@@ -8,11 +8,11 @@ defineProps({
     type: String,
     required: true
   },
-    whatsNumber: {
+  whatsNumber: {
     type: Number,
     required: true
   },
-    whatsLabel: {
+  whatsLabel: {
     type: String,
     required: true
   },
@@ -35,8 +35,6 @@ defineProps({
 })
 </script>
 
-
-
 <template>
     <div class="line"></div>
     <header>
@@ -48,7 +46,7 @@ defineProps({
         </router-link>
 
     <div class="menu">
-      
+
       <ul>
         <details>
           <summary>{{menu1}}</summary>
@@ -72,16 +70,16 @@ defineProps({
     </div>
 
     <div class="buttons">
-      <a 
-      type="button" 
+      <a
+      type="button"
       class="btn btn-outline-dark btn-sm btnRequests"
       :href="actionUrl">
       {{ actionLabel }}
       <i class="bi bi-cart2" style="font-size: 25px; margin-left: 10px;"></i>
       </a>
 
-      <a 
-      type="button" 
+      <a
+      type="button"
       class="btn btn-danger btn-sm btnContact"
       :href="`https://api.whatsapp.com/send/?phone=${whatsNumber}`" target="_blank">
       <i class="bi bi-whatsapp" style="font-size: 25px; margin-right: 10px;"></i>
@@ -91,8 +89,6 @@ defineProps({
       </div>
     </a>
     </div>
-        
-
 
     <div class="icon-menu">
         <a class="bi bi-cart2" :href="actionUrl" style="font-size: 35px; cursor:pointer;"></a>
@@ -103,7 +99,6 @@ defineProps({
         </div>
       </div>
     </header>
-
 
     <sidebar
     v-if="isSidebarOpen"
@@ -118,30 +113,29 @@ defineProps({
     @close="isSidebarOpen = false"
     />
 
-
     <div class="menuoverlay"></div>
 </template>
 
 <script>
-import Logo from '../Logo/Logo.vue';
-import Sidebar from '../Sidebar/Sidebar.vue';
+import Logo from '../Logo/Logo.vue'
+import Sidebar from '../Sidebar/Sidebar.vue'
 
 export default {
-    name:'Header',
-    components:{
-        Logo,
-        Sidebar
-    },
-    data() {
+  name: 'Header',
+  components: {
+    Logo,
+    Sidebar
+  },
+  data() {
     return {
-      isSidebarOpen: false,
+      isSidebarOpen: false
     }
   },
-methods: {
-  toggleSidebar() {
-    this.isSidebarOpen = !this.isSidebarOpen;
+  methods: {
+    toggleSidebar() {
+      this.isSidebarOpen = !this.isSidebarOpen
+    }
   }
-}
 }
 </script>
 

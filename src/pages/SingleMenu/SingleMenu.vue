@@ -1,5 +1,5 @@
 <template>
     <main>
-        <h1>PIZZAS SALGADAS</h1>
+        <h1>MENU UNICO</h1>
     </main>
 </template>

@@ -6,8 +6,8 @@
     width: 100%;
     height: 5px;
     background: #B80818;
-    position: relative;
-    z-index: 2;
+    position: fixed;
+    z-index: 3;
 }
 
 header{
@@ -20,6 +20,7 @@ header{
     padding: 10px;
     position: relative;
     z-index: 2;
+    position: fixed;
 }
 .menu{
   display: flex;

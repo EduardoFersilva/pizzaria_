@@ -1,13 +1,13 @@
 <script setup>
 defineProps({
-    image:{
-        type: String,
-        required: true
-    },
-    altImage:{
-        type: String,
-        required: true
-    }
+  image: {
+    type: String,
+    required: true
+  },
+  altImage: {
+    type: String,
+    required: true
+  }
 })
 </script>
 
@@ -19,7 +19,7 @@ defineProps({
 
 <script>
 export default {
-    name:'Logo',
+  name: 'Logo'
 }
 </script>
 

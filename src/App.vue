@@ -1,6 +1,6 @@
 <script setup>
-import Header from './components/Header/Header.vue';
-import Home from './pages/Home/Home.vue';
+import Header from './components/Header/Header.vue'
+import Home from './pages/Home/Home.vue'
 </script>
 
 <template>
@@ -18,16 +18,16 @@ import Home from './pages/Home/Home.vue';
     <main>
         <router-view></router-view>
     </main>
-    
+
 </template>
 
 <script>
 export default {
-    name:'App',
-    components:{
-        Header,
-        Home
-    }
+  name: 'App',
+  components: {
+    Header,
+    Home
+  }
 }
 </script>
 
