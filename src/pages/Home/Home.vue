@@ -19,7 +19,7 @@
      />
 
      <revenue
-     image-url="../../../public/imgs/Img-Receita.png"
+     image-url="/imgs/Img-Receita.png"
      title="PIZZA NAPOLITANA"
      subtitle="Receita original da Itália"
      description="A massa é preparada de forma artesanal, resultando em uma textura leve e crocante,
