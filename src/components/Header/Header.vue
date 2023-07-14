@@ -42,6 +42,7 @@ defineProps({
             <logo
             image="./imgs/logo.png"
             alt-image="Senhora Pizza"
+            @click="closeSidebar"
             />
         </router-link>
 
@@ -94,7 +95,7 @@ defineProps({
     </div>
 
     <div class="icon-menu">
-        <a class="bi bi-cart2" :href="actionUrl" style="font-size: 35px; cursor:pointer;"></a>
+        <a class="bi bi-cart2" :href="actionUrl" style="font-size: 35px; cursor:pointer;" @click="closeSidebar"></a>
         <div class="hamburger" :class="{ active: isSidebarOpen }" @click="toggleSidebar">
             <div :class="{ green: !isSidebarOpen, red: isSidebarOpen }"></div>
             <div class="white"></div>
@@ -137,6 +138,11 @@ export default {
   methods: {
     toggleSidebar() {
       this.isSidebarOpen = !this.isSidebarOpen
+    },
+    closeSidebar() {
+      if (this.isSidebarOpen) {
+        this.toggleSidebar()
+      }
     }
   }
 }

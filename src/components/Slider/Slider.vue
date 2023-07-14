@@ -11,10 +11,11 @@
       </div>
     </div>
   </main>
-    <button class="btnSeeMenu">
-    <span>VER CARDÁPIO COMPLETO</span>
+    <a class="btnSeeMenu"
+    :href="actionUrl">
+    <span>{{ actionLabel }}</span>
     <i class="bi bi-arrow-right"></i>
-    </button>
+    </a>
     <p class="pSeeMenu">São mais de 80 sabores!</p>
     </div>
 </template>
@@ -24,6 +25,7 @@ import {useKeenSlider} from 'keen-slider/vue.es'
 import 'keen-slider/keen-slider.min.css'
 
 export default {
+  namea: 'Slider',
   props: {
     productItems: {
       type: Array,
@@ -32,6 +34,14 @@ export default {
     title: {
       type: String,
       required: true
+    },
+    actionUrl: {
+      type: String,
+      required: false
+    },
+    actionLabel: {
+      type: String,
+      required: false
     }
   },
   computed: {

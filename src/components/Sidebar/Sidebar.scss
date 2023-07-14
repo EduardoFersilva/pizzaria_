@@ -22,7 +22,7 @@
 }
 
 .sidebar {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -55,6 +55,10 @@ summary::marker{
 }
 .summaryPizzas, .summaryDrink{
     margin:10px 0 0 20px
+}
+.summaryPizzas::marker,
+.summaryDrink::marker{
+    color: $color-third;
 }
 
 

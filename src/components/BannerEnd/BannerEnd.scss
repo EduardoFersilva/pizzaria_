@@ -1,0 +1,95 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+@import'../../assets/scss/button';
+
+
+main{
+    background: #B80818;
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+}
+main img{
+    height: 380px;
+    margin-top: 20px;
+}
+main .cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main h1{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $color-fourth;
+    margin-top: 25px;
+}
+main  h2{
+    font-family: Roboto;
+    font-size: 35px;
+    font-weight: 900;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $color-secondary;
+    margin-top: 20px
+}
+main p{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $color-secondary;
+    margin-top: 20px
+}
+.btnAction{
+    @include button;
+    margin-top: 25px;
+}
+.btnAction:hover{
+    transform: translateY(3px);
+    box-shadow: none;
+}
+.btnAction:active{
+  opacity: 0.5;
+}
+
+@media (max-width: 450px) {
+    main img{
+        height: 300px;
+    }
+}
+@media (max-width: 370px) {
+    main img{
+        height: 275px;
+    }
+}
+@media (min-width: 900px) {
+    main{
+        flex-direction: row;
+        justify-content: center;
+        min-height: 500px;
+    }
+    main img{
+        order: 2;
+    }
+    main .cont{
+        align-items: start;
+        width: 500px;
+    }
+    main h2, main p{
+        text-align: start;
+        width: 90%;
+    }
+}

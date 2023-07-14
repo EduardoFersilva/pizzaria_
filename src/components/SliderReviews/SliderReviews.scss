@@ -1,0 +1,66 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+@import'../../assets/scss/button';
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+    background: #F6F6F6;
+    min-height: 500px;
+}
+.keen-slider{
+    width: 100%;
+    max-height: 700px;  
+}
+
+[class^="number-slide"],
+[class*=" number-slide"] {
+  background: grey;
+ 
+}
+.number-slide1 {
+    border-radius: 18px;
+    border: none;
+    background: $color-background;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    height: 410px;
+}
+.number-slide1 img{
+    height: 180px;
+    border-radius: 50%;
+}
+.number-slide1 h1{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 10px 0;
+}
+.number-slide1 h2{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $color-primary;
+}
+.number-slide1 i{
+    margin: 20px 10px;
+}
+
+@media (min-width: 700px){
+    .number-slide1 h1{
+        width: 600px;
+    }
+}
