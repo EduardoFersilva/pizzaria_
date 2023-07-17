@@ -34,15 +34,14 @@ main{
     height: 410px;
 }
 .number-slide1 img{
-    height: 180px;
+    height: 150px;
     border-radius: 50%;
 }
 .number-slide1 h1{
     font-family: Roboto;
-    font-size: 18px;
-    font-weight: 900;
+    font-size: 17px;
+    font-weight: 600;
     line-height: 23px;
-    letter-spacing: 0em;
     text-align: center;
     margin: 10px 0;
 }
@@ -57,6 +56,9 @@ main{
 }
 .number-slide1 i{
     margin: 20px 10px;
+}
+.iconStar{
+    margin-top: 10px;
 }
 
 @media (min-width: 700px){

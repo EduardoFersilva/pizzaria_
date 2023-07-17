@@ -1,0 +1,238 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+@import'../../assets/scss/button';
+
+
+
+main{
+    width: 100%;
+    height: 1150px;
+    background-color: rgb(46, 44, 44);
+    padding: 20px 10px;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .logoButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main img{
+    height: 80px;
+    margin: 20px 0;
+}
+main .btnContact{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  height: 45px;
+  min-width: 170px;
+  color: $color-secondary;
+  transition: all 0.3s ease-in-out;
+  margin: 20px 0;
+}
+main .btnContact p{
+  font-size: 9px;
+  text-align: left;
+}
+main .btnContact:hover{
+    transform: translateY(3px);
+    box-shadow: none;
+    color: $color-text;
+}
+main .btnContact:active{
+  opacity: 0.5;
+}
+main ul{
+    margin: 20px 0 10px 0; 
+}
+main ul li{
+    text-align: center;
+    margin: 15px 0; 
+}
+main ul li a{
+
+    cursor: pointer;
+    color: $color-secondary;
+    transition: all 0.3s ease-in-out
+}
+main ul li a:hover{
+    color: #009247;
+}
+main .address{
+    text-align: center;
+    margin: 30px 0 50px 0;
+}
+main .address h1{
+    color: $color-fourth;
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 37px;
+    letter-spacing: 0em;
+    margin: 10px 0;
+}
+main .address h2{
+    color: $color-secondary;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    width: 250px;
+}
+main .address i{
+    color: $color-fourth;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    cursor: pointer;
+}
+main .service{
+    text-align: center;
+    margin: 30px 0 50px 0;
+}
+main .service h1{
+    color: $color-fourth;
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 37px;
+    letter-spacing: 0em;
+    margin: 10px 0;
+}
+main .service h2{
+    color: $color-secondary;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    width: 250px;
+}
+main .socialMedia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .socialMedia h1{
+    color: $color-fourth;
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 37px;
+    letter-spacing: 0em;
+    margin: 10px 0;
+}
+main .socialMedia i{
+    cursor: pointer;
+}
+main .line{
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.642);
+    width: 90%;
+    margin: 60px 0 40px 0;
+}
+main .textCopyright{
+    color: $color-secondary;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+main .textPolicy{
+    color: $color-secondary;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+main .textEndMobile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.textEndDesktop{
+    display: none;
+}
+
+@media (min-width: 1020px) {
+    main{
+        height: 390px;
+        background-image: url('/imgs/Img-Footer.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    main .cont {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 270px;
+    }
+    main .textEndMobile{
+        display: none;
+    }
+    .textEndDesktop{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+    }
+    .textEndDesktop .line{
+        width: 1000px;
+        margin: 0;
+    }
+    .textEndDesktop .text{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 1000px;
+    }
+    .textCopyright{
+        order: 2;
+        width: 580px !important;
+    }
+    main .logoButton{
+        margin: 0 40px 0 0;
+    }
+    main ul li{
+        text-align: start;
+        font-size: 14px;
+    }
+    main ul{
+        margin: 0 60px;
+    }
+    main .address{
+        margin: 20px 60px;
+        text-align: start;
+    }
+    main .service{
+        margin: 20px 60px;
+        text-align: start;
+    }
+    main h1{
+        font-size: 17px !important;
+    }
+    main h2{
+        font-size: 14px !important;
+    }
+}

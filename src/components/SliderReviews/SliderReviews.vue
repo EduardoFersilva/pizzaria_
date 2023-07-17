@@ -4,9 +4,12 @@
         <div v-for="(item, index) in assessments" :key="index" class="keen-slider__slide number-slide1">
         <img :src="item.image" alt="">
         <div class="iconStar">
-            <i class="bi bi-star-fill" style="font-size: 30px;color: #FC9D0E;"
-            v-for="i in 5" :key="i"
-            :class="getIcon(i)"></i>
+          <i class="bi bi-star-fill"
+          style="font-size: 25px; color: #FC9D0E;"
+          v-for="i in 5"
+          :key="i"
+          :class="getIcon(index, i)">
+          </i>
         </div>
         <h1>{{item.comment}}</h1>
         <h2>{{item.name}}</h2>
@@ -25,10 +28,6 @@ export default {
     assessments: {
       type: Array,
       required: true
-    },
-    score: {
-      type: Number,
-      required: true
     }
   },
   setup() {
@@ -43,18 +42,19 @@ export default {
     return {container}
   },
   methods: {
-    getIcon(i) {
+    getIcon(index, i) {
       let icon = 'bi bi-star'
-      const currentStarNumber = i + 1
-      const prevStarNumber = i
+      const currentStarNumber = i
+      const score = this.assessments[index].score
 
-      if (this.score >= currentStarNumber) {
+      if (score >= currentStarNumber) {
         icon += '-fill'
+      } else if (score >= currentStarNumber - 0.5) {
+        icon += '-half'
+      } else {
+        icon = 'bi bi-star'
       }
 
-      if (this.score > prevStarNumber && this.score < currentStarNumber) {
-        icon += '-half'
-      }
       return icon
     }
   }

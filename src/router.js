@@ -14,6 +14,7 @@ import Juices from './pages/Juices/Juices.vue'
 import Wines from './pages/Wines/Wines.vue'
 import Drinks from './pages/Drinks/Drinks.vue'
 import SingleMenu from './pages/SingleMenu/SingleMenu.vue'
+import PolicyPrivacy from './pages/PolicyPrivacy/PolicyPrivacy.vue'
 
 const routes = [
   {path: '/', component: Home},
@@ -28,7 +29,8 @@ const routes = [
   {path: '/sucos', component: Juices},
   {path: '/vinhos', component: Wines},
   {path: '/drinks', component: Drinks},
-  {path: '/menu-unico', component: SingleMenu}
+  {path: '/menu-unico', component: SingleMenu},
+  {path: '/politica-e-peivacidade', component: PolicyPrivacy}
 ]
 
 const router = createRouter({

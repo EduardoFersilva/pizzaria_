@@ -47,9 +47,10 @@
     action-label="SAIBA MAIS"
     />
 
-    <slider-reviews
-    :assessments="assessments"
-    :score="assessments.score" />
+  <slider-reviews
+  :assessments="assessments"
+  />
+
   </main>
 </template>
 
@@ -147,19 +148,19 @@ export default {
       assessments: [
         {
           image: './imgs/Img-Cliente1-SliderReviews.jpg',
-          score: 4.5,
+          score: 3.5,
           comment: '“A massa é preparada de forma artesanal, resultando em uma textura leve e crocante, e os ingredientes são selecionados com cuidado”',
           name: 'Prof. Gilmar'
         },
         {
           image: './imgs/Img-Cliente2-SliderReviews.jpg',
-          score: 5,
+          score: 4.7,
           comment: '“Uma das melhores pizzas que já comi. Muito boa mesmo. PALMEIRAS!!”',
           name: 'Gustavo Nunes'
         },
         {
           image: './imgs/Img-Cliente3-SliderReviews.jpg',
-          score: 3,
+          score: 2.5,
           comment: '“Já comi melhores.”',
           name: 'Eduardo Fernandes'
         }

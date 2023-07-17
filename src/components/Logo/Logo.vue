@@ -12,9 +12,7 @@ defineProps({
 </script>
 
 <template>
-    <main>
         <img :src="image" :alt="altImage">
-    </main>
 </template>
 
 <script>
