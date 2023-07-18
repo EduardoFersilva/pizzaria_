@@ -7,7 +7,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 0px;
+    padding: 100px 0 50px 0;
     background: #F6F6F6;
     min-height: 300px;
 }
@@ -71,6 +71,6 @@ main h2{
 }
 @media (max-width: 600px) {
     .keen-slider{
-        width: 90%;
+        width: 100%;
     }
 }

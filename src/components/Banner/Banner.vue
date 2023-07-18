@@ -48,21 +48,25 @@ defineProps({
                 <h2>{{subtitle}}</h2>
                 <p>{{description}}</p>
                 <div class="contVideo">
-                    <a
-                    class="btnAction"
-                    v-if="actionUrl !== undefined"
-                    :href="actionUrl">
-                    {{actionLabel}}
-                    </a>
 
-                    <a
-                    class="bi bi-play-circle-fill iconVideo"
-                    style="font-size: 40px; color: #fff;"
-                    v-if="videoUrl !== undefined"
-                    :href="videoUrl"
-                    target="_blank">
-                    <p>{{videoLabel}}</p>
-                </a>
+                  <a
+                  class="btnAction"
+                  v-if="actionUrl !== undefined"
+                  :href="actionUrl">
+                  {{actionLabel}}
+                  </a>
+
+                  <a
+                  v-if="videoUrl !== undefined"
+                  :href="videoUrl"
+                  target="_blank"
+                  type="button"
+                  class="btn btn-outline-light btnVideo">
+                  <i class="bi bi-play-circle-fill"
+                  style="font-size: 30px; margin-bottom:4px;"></i>
+                  {{videoLabel}}
+                  </a>
+
                 </div>
             </div>
             </div>

@@ -23,11 +23,10 @@ import Footer from './components/Footer/Footer.vue'
     <Footer
       :whats-number="5511912154278"
       whats-label="(11) 91215-4278"
-      menu1="Cardápio"
-      menu2="Promoções"
-      menu3="Sobre nós"
-      menu4="Fale conosco"
-      menu5="Meus pedidos"
+      menu1="Promoções"
+      menu2="Sobre nós"
+      menu3="Fale conosco"
+      menu4="Meus pedidos"
       address="Rua Sete de Setembro, 182 Vila Alzira - Santo André - SP"
       service="Segunda a Quinta das 18h às 23h Sexta a Domingo das 18h às 0h"
     />

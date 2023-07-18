@@ -18,7 +18,7 @@ import PolicyPrivacy from './pages/PolicyPrivacy/PolicyPrivacy.vue'
 
 const routes = [
   {path: '/', component: Home},
-  {path: '/promoções', component: Promotions},
+  {path: '/promocoes', component: Promotions},
   {path: '/sobre-nós', component: About},
   {path: '/fale-conosco', component: Contact},
   {path: '/meus-pedidos', component: Requests},
@@ -29,7 +29,7 @@ const routes = [
   {path: '/sucos', component: Juices},
   {path: '/vinhos', component: Wines},
   {path: '/drinks', component: Drinks},
-  {path: '/menu-unico', component: SingleMenu},
+  {path: '/cardápio-unico', component: SingleMenu},
   {path: '/politica-e-peivacidade', component: PolicyPrivacy}
 ]
 

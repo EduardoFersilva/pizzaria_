@@ -1,0 +1,130 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+@import'../../assets/scss/button';
+
+
+main{
+    padding: 50px 20px 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .primaryBanner{
+    max-width: 1300px;
+    min-height: 300px;
+    background-image: url('/imgs/Img-Banner.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+main .primaryBanner .cont{
+    width: 100%;
+    min-height: inherit;
+    background: linear-gradient(to left, #a326109e 10%, #060404af 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+main .primaryBanner .cont img{
+    height: 180px;
+    margin: 20px 0;
+}
+main .primaryBanner .cont h1{
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 35px;
+    letter-spacing: 0em;
+    color: $color-fourth;
+    margin: 10px 0;
+}
+main .primaryBanner .cont h2{
+    font-family: 'Roboto', sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff ;
+    font-size: 3em;
+    color: transparent;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 10px 0;
+}
+main .primaryBanner .cont p{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    color: $color-secondary;
+    margin: 10px 0;
+    text-align: center;
+    max-width: 600px;
+}
+main .primaryBanner .cont h3{
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    color: $color-secondary;
+    margin: 10px 0;
+}
+.btnAction{
+    @include button;
+    box-shadow: none;
+    margin: 20px 0 10px 0;
+    height: 45px;
+}
+.btnAction:hover{
+    transform: translateY(3px);
+}
+.btnAction:active{
+  opacity: 0.5;
+}
+.contArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buttonArea{
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 400px) {
+    h1{
+        text-align: center;
+    }
+    h2{
+        font-size: 30px !important;
+    }
+}
+
+@media (min-width: 910px) {
+    main .primaryBanner .cont{
+        flex-direction: row;
+    }
+    main .primaryBanner .cont img{
+        order: 2;
+        height: 200px;
+        margin-left: 50px;
+    }
+    main .primaryBanner .cont p{
+        text-align: start;
+        width: 520px;
+    }
+    main .primaryBanner .cont .btnAction{
+        margin: 0 0 0 40px;
+    }
+    .contArea{
+        align-items: start;
+    }
+}
+@media (max-width: 910px) {
+    .buttonArea{
+        flex-direction: column; 
+    }
+}

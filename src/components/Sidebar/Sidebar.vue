@@ -51,7 +51,7 @@ defineProps({
         </details>
       </details>
 
-        <li><router-link to="/promoções" @click="$emit('close')">{{menu2}}</router-link></li>
+        <li><router-link to="/promocoes" @click="$emit('close')">{{menu2}}</router-link></li>
         <li><router-link to="/sobre-nós" @click="$emit('close')">{{menu3}} </router-link></li>
         <li><router-link to="/fale-conosco" @click="$emit('close')">{{menu4}}</router-link></li>
     </ul>

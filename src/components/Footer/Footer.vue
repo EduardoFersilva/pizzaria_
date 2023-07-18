@@ -24,10 +24,6 @@ defineProps({
     type: String,
     required: false
   },
-  menu5: {
-    type: String,
-    required: false
-  },
   address: {
     type: String,
     required: true
@@ -62,11 +58,10 @@ defineProps({
         </div>
 
       <ul>
-        <li><router-link to="/pizzas-salgadas">{{menu1}}</router-link></li>
-        <li><router-link to="/promoções">{{menu2}}</router-link></li>
-        <li><router-link to="/sobre-nós">{{menu3}}</router-link></li>
-        <li><router-link to="/fale-conosco">{{menu4}}</router-link></li>
-        <li><router-link to="/meus-pedidos">{{menu5}}</router-link></li>
+        <li><router-link to="/promocoes">{{menu1}}</router-link></li>
+        <li><router-link to="/sobre-nós">{{menu2}}</router-link></li>
+        <li><router-link to="/fale-conosco">{{menu3}}</router-link></li>
+        <li><router-link to="/meus-pedidos">{{menu4}}</router-link></li>
       </ul>
 
         <div>

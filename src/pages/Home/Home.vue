@@ -6,7 +6,7 @@
       subtitle="BACK BACON"
       description="Generosas fatias de back bacon defumado e queijo derretido sobre a massa crocante,
        uma delícia para os amantes de bacon e pizza."
-      action-url="/#/menu-unico"
+      action-url="/#/cardápio-unico"
       action-label="FAZER PEDIDO!"
       video-url="http://www.google.com"
       video-label="ASSISTIR VÍDEO"
@@ -26,7 +26,7 @@
      e os ingredientes são selecionados com cuidado para garantir o melhor sabor e qualidade.
      Se você procura uma experiência gastronômica autêntica e saborosa,
      experimente a pizza napolitana da Senhora Pizza."
-     action-url="/#/cardapio-unico"
+     action-url="/#/cardápio-unico"
      action-label="FAZER PEDIDO!"
      />
 
@@ -79,42 +79,42 @@ export default {
           productName: 'Muzzarela de Búfala',
           price: '65',
           image: './imgs/Img-Pizza-Card1.png',
-          actionUrl: '/#/cardapio-unico',
+          actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
           productName: 'Super Premium',
           price: '75.5',
           image: './imgs/Img-Pizza-Card2.png',
-          actionUrl: '/#/cardapio-unico',
+          actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
           productName: 'Super Premium',
           price: '75.69',
           image: './imgs/Img-Pizza-Card3.png',
-          actionUrl: '/#/cardapio-unico',
+          actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
           productName: 'Caprici',
           price: '49.99',
           image: './imgs/Img-Pizza-Card4.png',
-          actionUrl: '/#/cardapio-unico',
+          actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
           productName: 'Muzzarela de Búfala',
           price: '65.15',
           image: './imgs/Img-Pizza-Card1.png',
-          actionUrl: '/#/cardapio-unico',
+          actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
           productName: 'Muzzarela de Búfala',
           price: '65.15',
           image: './imgs/Img-Pizza-Card2.png',
-          actionUrl: '/#/cardapio-unico',
+          actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         }
       ],

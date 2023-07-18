@@ -28,7 +28,7 @@ defineProps({
 </script>
 
 <template>
-    <main>
+    <div class="mainn">
         <img :src="imageUrl" :alt="title">
 
         <div class="cont">
@@ -41,7 +41,7 @@ defineProps({
           class="btnAction">{{actionLabel}}
           </a>
         </div>
-    </main>
+    </div>
 </template>
 
 <script>
