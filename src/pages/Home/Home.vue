@@ -38,11 +38,14 @@
     <banner-end
     image-url="/imgs/Img-BannerEnd.png"
     title="CONHEÇA NOSSA HISTÓRIA"
+    title-color="#FC9D0E"
     subtitle="Uma Senhora Pizza desde 1963"
+    subtitle-color="#FFFFFF"
     description="A Senhora Pizza é uma pizzaria renomada localizada na região do ABC,
     que está no mercado desde 1963 oferecendo as melhores pizzas da região.
     Com ingredientes frescos e selecionados, massa artesanal e um atendimento de excelência,
     a Senhora Pizza é o lugar perfeito para quem busca uma experiência gastronômica única e saborosa."
+    description-color="#FFFFFF"
     action-url="/#/sobre-nós"
     action-label="SAIBA MAIS"
     />

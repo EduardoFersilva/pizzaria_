@@ -8,42 +8,55 @@ defineProps({
     type: String,
     required: true
   },
+  titleColor: {
+    type: String,
+    default: 'black'
+  },
   subtitle: {
     type: String,
     required: true
+  },
+  subtitleColor: {
+    type: String,
+    default: 'black'
   },
   description: {
     type: String,
     required: true
   },
+  descriptionColor: {
+    type: String,
+    default: 'black'
+  },
   actionUrl: {
     type: String,
-    required: true
+    required: false
   },
   actionLabel: {
     type: String,
-    required: true
+    required: false
   }
 })
 </script>
 
 <template>
-    <main>
+    <div class="mainn">
         <img :src="imageUrl" :alt="title">
 
         <div class="cont">
-            <h1>{{title}}</h1>
-            <h2>{{subtitle}}</h2>
-            <p>{{ description }}</p>
+            <h1 :style="{ color: titleColor }">{{ title }}</h1>
+            <h2 :style="{ color: subtitleColor }">{{ subtitle }}</h2>
+            <p :style="{ color: descriptionColor }">{{ description }}</p>
             <a
             class="btnAction"
             v-if="actionUrl !== undefined"
             :href="actionUrl">
-            {{actionLabel}}
+            {{ actionLabel }}
             </a>
         </div>
-    </main>
+    </div>
 </template>
+
 <script>
 export default {
   name: 'BannerEnd'

@@ -43,7 +43,6 @@ defineProps({
           <logo
           image="./imgs/Img-Logo-Footer.png"
           alt-image="Senhora Pizza"
-          @click="closeSidebar"
           />
           <a
           type="button"
@@ -59,7 +58,7 @@ defineProps({
 
       <ul>
         <li><router-link to="/promocoes">{{menu1}}</router-link></li>
-        <li><router-link to="/sobre-nós">{{menu2}}</router-link></li>
+        <li><router-link to="/sobre-nos">{{menu2}}</router-link></li>
         <li><router-link to="/fale-conosco">{{menu3}}</router-link></li>
         <li><router-link to="/meus-pedidos">{{menu4}}</router-link></li>
       </ul>

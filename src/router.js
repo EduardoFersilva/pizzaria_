@@ -19,7 +19,7 @@ import PolicyPrivacy from './pages/PolicyPrivacy/PolicyPrivacy.vue'
 const routes = [
   {path: '/', component: Home},
   {path: '/promocoes', component: Promotions},
-  {path: '/sobre-nós', component: About},
+  {path: '/sobre-nos', component: About},
   {path: '/fale-conosco', component: Contact},
   {path: '/meus-pedidos', component: Requests},
   {path: '/pizzas-salgadas', component: SavoryPizzas},

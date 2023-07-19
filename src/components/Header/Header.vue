@@ -68,7 +68,7 @@ defineProps({
           </div>
         </details>
         <li><router-link to="/promocoes">{{menu2}}</router-link></li>
-        <li><router-link to="/sobre-nós">{{menu3}}</router-link></li>
+        <li><router-link to="/sobre-nos">{{menu3}}</router-link></li>
         <li><router-link to="/fale-conosco">{{menu4}}</router-link></li>
       </ul>
     </div>
