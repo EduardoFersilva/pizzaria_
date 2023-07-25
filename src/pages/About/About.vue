@@ -1,3 +1,4 @@
+
 <template>
     <main>
         <div class="banner">
@@ -6,7 +7,6 @@
                     <logo
                     image="./imgs/Img-Logo-Footer.png"
                     alt-image="Senhora Pizza"
-                    @click="closeSidebar"
                     />
                     <h1>desde 1963</h1>
                 </div>

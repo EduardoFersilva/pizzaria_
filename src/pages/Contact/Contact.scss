@@ -1,0 +1,190 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+@import'../../assets/scss/button';
+
+
+main{
+    padding-top: 100px;
+    background: $color-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main h1{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 23px;
+    letter-spacing: 0em;
+    color: $color-text;
+    margin: 50px 0 20px 0;
+}
+main .infos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+main .loc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .loc h1{
+    margin-left: 30px;
+}
+main .loc .cLoc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .loc .cardLoc{
+    width: 90%;
+    min-height: 150px;
+    background: $color-secondary;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+}
+main .loc .cardLoc h1{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-text;
+    margin: 0;
+}
+main .loc .cardLoc i{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FC9D0E;
+}
+main .tel{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .tel h1{
+    margin-left: 30px;
+}
+main .tel .cTel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .tel .cardTel{
+    width: 90%;
+    min-height: 150px;
+    background: $color-secondary;
+    border-radius: 18px;
+    padding: 10px;
+}
+main .tel .cardTel h1{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    text-align: left;
+    color: $color-primary;
+    margin-left: 10px;
+    margin-right: 180px;
+}
+form{
+    width: 90%;
+    height: auto;
+}
+main form h1{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-text;
+}
+main form p{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #747474;
+}
+main form .cardForm{
+    width: 100%;
+    min-height: 500px;
+    background: $color-secondary;
+    border-radius: 18px;
+    margin: 30px 0;
+    padding: 20px;
+}
+main form .cardForm #textarea{
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+    padding: 10px;
+    background: #F7F1E8;
+    color: $color-text;
+    width: 100%;
+    min-height: 250px;
+    margin-top: 30px;
+}
+::placeholder{
+    color: $color-text;
+}
+main form .cardForm .divAction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0 0 0;
+}
+main form .cardForm .divAction .btnAction{
+    @include button;
+    margin-top: 20px;
+}
+main form .cardForm .divAction .btnAction:hover{
+    transform: translateY(3px);
+    box-shadow: none;
+}
+main form .cardForm .divAction .btnAction:active{
+  opacity: 0.5;
+}
+
+@media (min-width: 950px){
+    main .infos{
+        flex-direction: row;
+        max-width: 1000px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    form .cardForm {
+        max-width: 950px;
+    }
+    form .cardForm .inputs{
+        display: flex;
+        justify-content: space-between;
+    }
+    form .cardForm .divAction{
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    }
+    .inputGroup{
+        margin: 0;
+        width: 260px;
+    }
+}
