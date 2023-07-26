@@ -1,0 +1,23 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+@import'../../assets/scss/button';
+
+
+main{
+    padding: 100px 20px 100px 20px;
+    background: $color-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-text;
+    margin: 50px 0 30px 0;
+}

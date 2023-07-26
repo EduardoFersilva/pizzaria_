@@ -1,0 +1,245 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+@import'../../assets/scss/button';
+
+
+.mainRequests h1{
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-text;
+    margin: 50px 0 30px 0;
+}
+.mainRequests .cardPedido{
+    min-height: 300px;
+    width: 400px;
+    background: $color-secondary;
+    border-radius: 18px;
+    padding: 10px;
+    margin: 50px 0;
+}
+.mainRequests .cardPedido .icons{
+    float: right;
+}
+.mainRequests .cardPedido i{
+    cursor: pointer;
+}
+.mainRequests .cardPedido img{
+   height: 160px;
+   margin: 10px 0;
+}
+.mainRequests .cardPedido h1{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-text;
+    margin: 10px 0 30px 0;
+}
+.mainRequests .cardPedido .infosProduct{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.mainRequests .cardPedido .infosProduct h1{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-text;
+    margin: 10px 0;
+}
+.mainRequests .cardPedido .infosProduct p{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #757575;
+}
+.mainRequests .cardPedido .obs{
+    margin: 30px 0 10px 0;
+}
+.mainRequests .cardPedido .obs h1{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-text;
+    margin: 10px 0;
+}
+.mainRequests .cardPedido .obs p{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #757575;
+}
+.mainRequests .cardPedido .amount{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 10px;
+}
+.mainRequests .cardPedido .amount h1{
+    margin: 20px 0 15px 0;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-text;
+    margin: 10px 0
+}
+.mainRequests .cardPedido h2{
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: $color-primary;
+}
+
+@media (min-width: 950px){
+    .cardPedido{
+        display: none;
+    }
+}
+
+@media (max-width: 410px){
+    .mainRequests .cardPedido{
+        width: 320px;
+    }
+}
+
+@media (max-width: 330px){
+    .mainRequests .cardPedido{
+        width: 300px;
+    }
+}
+.mainRequests .cardPedidoDesktop{
+    width: 1100px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    background: $color-secondary;
+    border-radius: 18px;
+    padding: 10px;
+    margin: 50px 0
+}
+.mainRequests .cardPedidoDesktop img{
+    height: 180px;
+    margin: 0 50px 0 0;
+}
+.mainRequests .cardPedidoDesktop h1{
+    margin: 15px 0 10px 0 ;
+}
+.mainRequests .cardPedidoDesktop .infosProduct{
+    display: flex;
+}
+.mainRequests .cardPedidoDesktop .infosProduct .size{
+    margin-right: 100px;
+}
+.mainRequests .cardPedidoDesktop .infosProduct h1{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-text;
+    margin: 10px 0;
+}
+.mainRequests .cardPedidoDesktop .infosProduct p{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #757575;
+}
+.mainRequests .cardPedidoDesktop .obs h1{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-text;
+    margin: 20px 0 10px 0;
+}
+.mainRequests .cardPedidoDesktop .obs p{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #757575;
+}
+.mainRequests .cardPedidoDesktop .amount{
+    display: flex;
+    align-items: end;
+}
+.mainRequests .cardPedidoDesktop .amount h1{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-text;
+    margin: 10px 0;
+}
+.mainRequests .cardPedidoDesktop .amount h2{
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: $color-primary;
+}
+.mainRequests .cardPedidoDesktop .count{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 50px 0 70px;
+}
+.mainRequests .cardPedidoDesktop .icons{
+    display: flex;
+    float: right;
+    height: 30px;
+    cursor: pointer;
+}
+.mainRequests .cardPedidoDesktop .divPrice{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 70px;
+}
+
+@media (max-width: 950px){
+    .cardPedidoDesktop{
+        display: none !important;
+    }
+}
+
+
+

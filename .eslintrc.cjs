@@ -23,6 +23,7 @@ module.exports = {
     'max-len': ['error', {'code': 120, 'ignoreComments': true}],
     'vue/no-multiple-template-root': 'off',
     'vue/multi-word-component-names': 'off',
+    "linebreak-style": ["error", "windows"],
 
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
