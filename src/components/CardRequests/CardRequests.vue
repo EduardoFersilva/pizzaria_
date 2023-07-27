@@ -24,11 +24,10 @@ defineProps({
         type: String,
         required: true
     },
-    price:{
-        type: String,
+    price: {
+        type: Number,
         required: true
-    },
-    
+    }
 })
 </script>
 
@@ -40,49 +39,49 @@ defineProps({
                 <i class="bi bi-trash3" style="font-size: 25px; margin-left: 10px;"></i>
             </div>
             <img :src="imageUrl" :alt="title">
-            <h1>{{title}}</h1>
+            <h1>{{ title }}</h1>
 
             <div class="infosProduct">
                 <div class="size">
                     <h1>Tamanho</h1>
-                    <p>{{size}}</p>
+                    <p>{{ size }}</p>
                 </div>
-                <div class="borde">
+                <div class="borde" v-if="border !== undefined">
                     <h1>Borda</h1>
-                    <p>{{border}}</p>
+                    <p>{{ border }}</p>
                 </div>
             </div>
             <div class="obs">
                 <h1>Observações</h1>
-                <p>{{comments}}</p>
+                <p>{{ comments }}</p>
             </div>
             <div class="amount">
                 <div>
                     <h1>Quantidade</h1>
                     <count />
                 </div>
-                <h2>R$ {{price}}</h2>
+                <h2>R$ {{ price }}</h2>
             </div>
         </div>
 
         <div class="cardPedidoDesktop">
             <img :src="imageUrl" :alt="title">
             <div>
-                <h1>{{title}}</h1>
+                <h1>{{ title }}</h1>
 
                 <div class="infosProduct">
                     <div class="size">
                         <h1>Tamanho</h1>
-                        <p>{{size}} pedaços</p>
+                        <p>{{ size }} pedaços</p>
                     </div>
-                    <div class="borde">
+                    <div class="borde" v-if="border !== undefined">
                         <h1>Borda</h1>
-                        <p>{{border}}</p>
+                        <p>{{ border }}</p>
                     </div>
                 </div>
                 <div class="obs">
                     <h1>Observações</h1>
-                    <p>{{comments}}</p>
+                    <p>{{ comments }}</p>
                 </div>
             </div>
             <div class="divPrice">
@@ -95,12 +94,13 @@ defineProps({
                         <h1>Quantidade</h1>
                         <count />
                     </div>
-                    <h2>R$ {{price}}</h2>
+                    <h2>R$ {{ price }}</h2>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
 
 <script>
 import Count from '../../components/Count/Count.vue';
@@ -109,7 +109,8 @@ export default {
     name:'CardRequests',
     components:{
         Count
-    }
+    },
+    
 }
 </script>
 
