@@ -49,13 +49,11 @@ main .secondLayer img{
 }
 .contBanner h2{
     font-family: 'Roboto', sans-serif;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #fff;
     font-size: 3em;
-    color: transparent;
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
+    color: $color-secondary;
 }
 .contBanner p{
     font-family: Roboto;
@@ -70,29 +68,30 @@ main .secondLayer img{
 }
 .btnAction{
     @include button;
+    box-shadow: none;
+    height: 45px;
+    width: 165px;
 }
 .btnAction:hover{
     transform: translateY(3px);
-    box-shadow: none;
 }
 .btnAction:active{
   opacity: 0.5;
 }
 .contBanner .btnVideo{
     border-radius: 50px;
-    width: 180px;
-    height: 50px;
+    height: 45px;
+    width: 165px;
+    padding: 0 7px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.3s ease-in-out;
     margin-top: 20px;
     color: $color-secondary;
-    box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
 }
 .contBanner .btnVideo:hover{
     transform: translateY(3px);
-    box-shadow: none;
     color: $color-text;
 }
 @media (min-width: 870px) {

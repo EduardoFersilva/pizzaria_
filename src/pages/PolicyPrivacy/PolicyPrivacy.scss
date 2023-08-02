@@ -1,0 +1,67 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+@import'../../assets/scss/button';
+
+main{
+    padding-top: 150px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background: #F6F6F6;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+}
+h1{
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 47px;
+    letter-spacing: 0em;
+    color: #000000;
+    margin-bottom: 50px;
+    max-width: 900px;
+    text-align: left !important;
+}
+h2{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 23px;
+    letter-spacing: 0em;
+    color: #000000;
+    margin-bottom: 20px;
+}
+p{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    color: #8E8E8E;
+}
+.privacidade{
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.cookies{
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+@media (max-width: 630px){
+    h1{
+        font-size: 30px;
+    }
+}
+@media (max-width: 480px){
+    h1{
+        font-size: 20px;
+    }
+}

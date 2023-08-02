@@ -1,6 +1,11 @@
 <template>
   <main>
     <h2>{{ title }}</h2>
+
+    <div class="arrow-container">
+      <i class="bi bi-arrow-right arrow-icon" style="font-size: 25px;"></i>
+    </div>
+
     <div ref="container" class="keen-slider">
       <div v-for="(item, index) in productItemsCircle" :key="index" class="keen-slider__slide number-slide1">
         <img :src="item.image" :alt="item.productName">

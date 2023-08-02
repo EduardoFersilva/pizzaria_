@@ -63,7 +63,7 @@ defineProps({
                   type="button"
                   class="btn btn-outline-light btnVideo">
                   <i class="bi bi-play-circle-fill"
-                  style="font-size: 30px; margin-bottom:4px;"></i>
+                  style="font-size: 30px;"></i>
                   {{videoLabel}}
                   </a>
 

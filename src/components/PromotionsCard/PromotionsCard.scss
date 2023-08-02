@@ -43,14 +43,12 @@ main .primaryBanner .cont h1{
 }
 main .primaryBanner .cont h2{
     font-family: 'Roboto', sans-serif;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #fff ;
     font-size: 3em;
-    color: transparent;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     margin: 10px 0;
+    color: $color-secondary;
 }
 main .primaryBanner .cont p{
     font-family: Roboto;

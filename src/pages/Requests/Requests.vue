@@ -26,7 +26,7 @@
   import CardRequests from "../../components/CardRequests/CardRequests.vue";
   
   export default {
-    name: "Requests",
+  name: "Requests",
     components: {
       CardRequests,
     },
@@ -46,7 +46,7 @@
             title: "Coca-Cola",
             size: "600 ml",
             comments: "--",
-            price: "9,00",
+            price: "10,00",
           },
         ],
         total: 0,

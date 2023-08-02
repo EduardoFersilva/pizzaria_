@@ -1,33 +1,33 @@
 <script setup>
 defineProps({
-    imageUrl:{
-        type: String,
-        required: true
-    },
-    title:{
-        type: String,
-        required: true
-    },
-    title:{
-        type: String,
-        required: true
-    },
-    size:{
-        type: String,
-        required: true
-    }, 
-    border:{
-        type: Number,
-        required: false
-    },
-    comments:{
-        type: String,
-        required: true
-    },
-    price: {
-        type: Number,
-        required: true
-    }
+  imageUrl: {
+    type: String,
+    required: true
+  },
+  title: {
+    type: String,
+    required: true
+  },
+  title: {
+    type: String,
+    required: true
+  },
+  size: {
+    type: String,
+    required: true
+  },
+  border: {
+    type: Number,
+    required: false
+  },
+  comments: {
+    type: String,
+    required: true
+  },
+  price: {
+    type: Number,
+    required: true
+  }
 })
 </script>
 
@@ -38,7 +38,7 @@ defineProps({
                 <i class="bi bi-pencil-square" style="font-size: 25px; margin-left: 10px;"></i>
                 <i class="bi bi-trash3" style="font-size: 25px; margin-left: 10px;"></i>
             </div>
-            <img :src="imageUrl" :alt="title">
+              <img :src="imageUrl" :alt="title">
             <h1>{{ title }}</h1>
 
             <div class="infosProduct">
@@ -101,16 +101,15 @@ defineProps({
     </div>
 </template>
 
-
 <script>
-import Count from '../../components/Count/Count.vue';
+import Count from '../../components/Count/Count.vue'
 
 export default {
-    name:'CardRequests',
-    components:{
-        Count
-    },
-    
+  name: 'CardRequests',
+  components: {
+    Count
+  }
+
 }
 </script>
 
