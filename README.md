@@ -1,7 +1,16 @@
-# Vue 3 + Vite
+# Como instalar
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Para começar a utilizar este projeto, você precisará ter o Node.js instalado em sua máquina. 
+Em seguida, execute o seguinte comando para instalar todas as dependências necessárias:
 
-## Recommended IDE Setup
+``
+    yarn
+``
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+# Como inicializar o projeto
+
+Após a instalação das dependências, você pode iniciar o projeto executando o seguinte comando:
+
+``
+    yarn dev
+``
