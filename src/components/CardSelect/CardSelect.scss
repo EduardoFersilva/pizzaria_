@@ -1,0 +1,58 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+@import'../../assets/scss/button';
+
+.card {
+    border-radius: 14px;
+    border: none;
+    max-width: 600px;
+    height: 150px;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+.radio {
+    width: 30px;
+    height: 30px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.iconImg {
+    width: 60px;
+    height: 60px;
+    background: #F6F6F6;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+label {
+    margin-bottom: 0 !important;
+}
+.img {
+    width: 40px;
+    height: 40px;
+}
+.subtitle {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #A5A5A5;
+}
+p {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+  

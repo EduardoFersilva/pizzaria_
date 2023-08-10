@@ -11,28 +11,6 @@ main{
     background: #F6F6F6;
     min-height: 500px;
 }
-.arrow-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .arrow-icon {
-    animation: arrowAnimation 1s infinite;
-  }
-  
-  .arrow-text {
-    margin-left: 10px;
-    font-size: 18px;
-  }
-  
-  @keyframes arrowAnimation {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(10px);
-    }
-  }
 .keen-slider{
     width: 100%;
     max-height: 700px;  

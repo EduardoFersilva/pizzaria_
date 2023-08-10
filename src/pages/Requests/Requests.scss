@@ -62,6 +62,10 @@ main .card .price{
 main .card .btnAdvance{
     @include buttonSecondary;
      background: $color-third;
+     
+}
+main .card .btnAdvance a{
+    color: $color-secondary;
 }
 main .card .btnAdvance:hover{
     transform: translateY(3px);

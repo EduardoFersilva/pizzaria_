@@ -20,28 +20,6 @@ main h2{
     text-align: center;
     margin: 0 0 20px 0;
 }
-.arrow-container {
-    display: none;
-    align-items: center;
-  }
-  
-  .arrow-icon {
-    animation: arrowAnimation 1s infinite;
-  }
-  
-  .arrow-text {
-    margin-left: 10px;
-    font-size: 18px;
-  }
-  
-  @keyframes arrowAnimation {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(10px);
-    }
-  }
 .keen-slider{
     width: 1100px;
     max-height: 700px;  
@@ -86,9 +64,6 @@ main h2{
     .keen-slider{
         width: 825px;
     }
-    .arrow-container {
-        display: flex;
-      }
 }
 @media (max-width: 890px) {
     .keen-slider{

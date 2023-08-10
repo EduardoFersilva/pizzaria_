@@ -1,0 +1,49 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+
+
+.expandableMenu{
+    position: fixed;
+    min-height: 100px;
+    min-width: 150px;
+    background-color: $color-secondary;
+    border-radius: 14px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.404) 0 0 8px;
+    z-index: 2;
+}
+.expandableMenu summary::marker{
+    color: $color-primary;
+}
+.expandableMenu summary{
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.expandableMenu summary:hover{
+    color: $color-third;
+}
+.expandableMenu li {
+    margin: 10px 0 0 20px;
+}
+.expandableMenu li a{
+    transition: all 0.3s ease-in-out;
+}
+.expandableMenu li a:hover{
+    color: $color-third;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+.overlay-visible {
+    visibility: visible;
+}

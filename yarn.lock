@@ -2048,6 +2048,11 @@ vue@^3.2.0, vue@^3.2.25, vue@^3.3.4, vue@3.3.4:
     "@vue/server-renderer" "3.3.4"
     "@vue/shared" "3.3.4"
 
+vuetify@^3.3.12:
+  version "3.3.12"
+  resolved "https://registry.npmjs.org/vuetify/-/vuetify-3.3.12.tgz"
+  integrity sha512-mH3CF+ALM1sC0Zm91IPq5b+bummrHH/Ek9jwYrQ0+fOAoJWd9nUcOIHODTPY+PODJDbJTwF6b3wVTDwqzUgTgQ==
+
 watchpack@^2.4.0:
   version "2.4.0"
   resolved "https://registry.npmjs.org/watchpack/-/watchpack-2.4.0.tgz"

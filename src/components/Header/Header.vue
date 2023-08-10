@@ -49,27 +49,24 @@ defineProps({
     <div class="menu">
 
       <ul>
-        <details>
-          <summary>{{menu1}}</summary>
-          <div class="detailsItems">
-            <details>
-              <summary>Pizzas</summary>
-                <li><router-link to="/pizzas-salgadas">Pizzas Salgadas</router-link></li>
-                <li><router-link to="/pizzas-doces">Pizzas Doces</router-link></li>
-            </details>
-            <details class="drinkItems">
-              <summary>Bebidas</summary>
-              <li><router-link to="/refrigerantes">Refrigerantes</router-link></li>
-              <li><router-link to="/cervejas">Cervejas</router-link></li>
-              <li><router-link to="/sucos">Sucos</router-link></li>
-              <li><router-link to="/vinhos">Vinhos</router-link></li>
-              <li><router-link to="/drinks">Drinks</router-link></li>
-            </details>
-          </div>
-        </details>
-        <li><router-link to="/promocoes">{{menu2}}</router-link></li>
-        <li><router-link to="/sobre-nos">{{menu3}}</router-link></li>
-        <li><router-link to="/fale-conosco">{{menu4}}</router-link></li>
+        <li :class="{ active: isSidebarOpen }" @click="toogleisExpandableMenu">{{ menu1 }}</li>
+        <expandable-menu
+        v-if="isExpandableMenuOpen"
+        menu1="Pizzas"
+        subMenu1="Pizzas Salgadas"
+        subMenu2="Pizzas doces"
+        menu2="Bebidas"
+        subMenu3="Refrigerantes"
+        subMenu4="Cervejas"
+        subMenu5="Sucos"
+        subMenu6="Vinhos"
+        subMenu7="Drinks"
+        @overlay:click="isExpandableMenuOpen = false"
+        @close="isExpandableMenuOpen = false"
+        />
+        <li><router-link to="/promocoes"    @click="closeExpandableMenu">{{menu2}}</router-link></li>
+        <li><router-link to="/sobre-nos"    @click="closeExpandableMenu">{{menu3}}</router-link></li>
+        <li><router-link to="/fale-conosco" @click="closeExpandableMenu">{{menu4}}</router-link></li>
       </ul>
     </div>
 
@@ -122,17 +119,20 @@ defineProps({
 
 <script>
 import Logo from '../Logo/Logo.vue'
-import Sidebar from '../Sidebar/Sidebar.vue'
+import Sidebar from '../../components/Sidebar/Sidebar.vue'
+import ExpandableMenu from '../ExpandableMenu/ExpandableMenu.vue'
 
 export default {
   name: 'Header',
   components: {
     Logo,
-    Sidebar
+    Sidebar,
+    ExpandableMenu
   },
   data() {
     return {
-      isSidebarOpen: false
+      isSidebarOpen: false,
+      isExpandableMenuOpen: false
     }
   },
   methods: {
@@ -142,6 +142,14 @@ export default {
     closeSidebar() {
       if (this.isSidebarOpen) {
         this.toggleSidebar()
+      }
+    },
+    toogleisExpandableMenu() {
+      this.isExpandableMenuOpen = !this.isExpandableMenuOpen
+    },
+    closeExpandableMenu() {
+      if (this.isExpandableMenuOpen) {
+        this.toogleisExpandableMenu()
       }
     }
   }

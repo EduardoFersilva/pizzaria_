@@ -30,10 +30,10 @@ import Footer from './components/Footer/Footer.vue'
       address="Rua Sete de Setembro, 182 Vila Alzira - Santo André - SP"
       service="Segunda a Quinta das 18h às 23h Sexta a Domingo das 18h às 0h"
     />
-
 </template>
 
 <script>
+
 export default {
   name: 'App',
   components: {

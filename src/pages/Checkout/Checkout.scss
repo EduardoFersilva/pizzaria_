@@ -1,0 +1,39 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+@import'../../assets/scss/button';
+
+main{
+    padding: 100px 10px;
+    background: $color-background;
+}
+main h1{
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 47px;
+    letter-spacing: 0em;
+    margin: 20px 0;
+}
+main h2{
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 40px 0 0 0;
+}
+.selected{
+    border: 2px solid #009247;
+}
+.selected::after{
+  content: '';
+  width: 15px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #009247;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+

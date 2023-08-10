@@ -81,7 +81,7 @@ main .secondLayer img{
 .contBanner .btnVideo{
     border-radius: 50px;
     height: 45px;
-    width: 165px;
+    min-width: 165px;
     padding: 0 7px;
     display: flex;
     justify-content: space-between;
