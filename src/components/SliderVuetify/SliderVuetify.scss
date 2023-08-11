@@ -1,0 +1,35 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+
+main{
+    background: $color-background;
+}
+main .cont{
+    background: $color-background !important;
+    box-shadow: none !important;
+}
+main .cont .card{
+    box-shadow: none;
+    border: none;
+    background: $color-secondary;
+    border-radius: 18px;
+}
+.pa-4{
+    padding: 10px 0 !important;
+}   
+
+@media (max-width: 1290px){
+    main .cont{
+        width: 980px  !important;
+    }
+}
+@media (max-width: 1000px){
+    main .cont{
+        width: 685px  !important;
+    }
+}
+@media (max-width: 700px){
+    main .cont{
+        width: 400px  !important;
+    }
+}

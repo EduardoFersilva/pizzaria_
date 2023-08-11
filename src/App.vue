@@ -2,6 +2,7 @@
 import Header from './components/Header/Header.vue'
 import Home from './pages/Home/Home.vue'
 import Footer from './components/Footer/Footer.vue'
+import SliderVuetify from './components/SliderVuetify/SliderVuetify.vue'
 </script>
 
 <template>
@@ -19,6 +20,9 @@ import Footer from './components/Footer/Footer.vue'
     <main>
         <router-view></router-view>
     </main>
+
+    <slider-vuetify />
+    
 
     <Footer
       :whats-number="5511912154278"
@@ -39,7 +43,8 @@ export default {
   components: {
     Header,
     Home,
-    Footer
+    Footer,
+    SliderVuetify
   }
 }
 </script>

@@ -70,6 +70,8 @@ defineProps({
 
 <script>
 export default {
+  name: 'ExpandableMenu',
+  emits: ['overlay:click', 'close'],
   data() {
     return {
 
