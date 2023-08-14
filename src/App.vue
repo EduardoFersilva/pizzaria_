@@ -21,9 +21,6 @@ import SliderVuetify from './components/SliderVuetify/SliderVuetify.vue'
         <router-view></router-view>
     </main>
 
-    <slider-vuetify />
-    
-
     <Footer
       :whats-number="5511912154278"
       whats-label="(11) 91215-4278"

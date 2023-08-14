@@ -1,119 +1,137 @@
 <template>
     <main>
-        <h1>Entrega e Pagamento</h1>
+        <div class="infos">
+          <h1>Entrega e Pagamento</h1>
+          <h2>Informações</h2>
 
-        <h2>Informações</h2>
+          <inputs
+          label="Nome"
+          v-bind="name"
+          type="text"
+          placeholder=""
+          :width="'100%'"
+          />
 
-        <inputs
-        label="Nome"
-        v-bind="name"
-        type="text"
-        placeholder=""
-        :width="'100%'"
-        />
+          <inputs
+          label="Telefone"
+          v-bind="phone"
+          type="number"
+          placeholder=""
+          :width="'100%'"
+          />
 
-        <inputs
-        label="Telefone"
-        v-bind="phone"
-        type="number"
-        placeholder=""
-        :width="'100%'"
-        />
+          <h2>Retirada ou Entrega</h2>
 
-        <h2>Retirada ou Entrega</h2>
+          <card-select
+          imageUrl="./imgs/Img-Icon-Retirada.png"
+          title="Retirada no balcão"
+          description="Rua Sete de Setembro, 182 Vila Alzira Santo André - SP"
+          :selected="isPickUp"
+          @click="selectCardDelivery('entrega')"
+          :class="{ 'selected': isPickUp }"
+          />
 
-        <card-select
-        imageUrl="./imgs/Img-Icon-Retirada.png"
-        title="Retirada no balcão"
-        description="Rua Sete de Setembro, 182 Vila Alzira Santo André - SP"
-        :selected="isPickUp"
-        @click="selectCardDelivery('entrega')"
-        :class="{ 'selected': isPickUp }"
-        />
+          <card-select
+          imageUrl="./imgs/Img-Icon-Entrega.png"
+          title="Entrega"
+          description="R$ 5,00"
+          :selected="isDelivery"
+          @click="selectCardDelivery('retirada')"
+          :class="{ 'selected': isDelivery }"
+          />
 
-        <card-select
-        imageUrl="./imgs/Img-Icon-Entrega.png"
-        title="Entrega"
-        description="R$ 5,00"
-        :selected="isDelivery"
-        @click="selectCardDelivery('retirada')"
-        :class="{ 'selected': isDelivery }"
-        />
+          <inputs
+          label="CEP"
+          v-bind="cep"
+          type="cep"
+          placeholder=""
+          :width="'100%'"
+          />
 
-        <inputs
-        label="CEP"
-        v-bind="cep"
-        type="cep"
-        placeholder=""
-        :width="'100%'"
-        />
+          <inputs
+          label="Endereço"
+          v-bind="address"
+          type="text"
+          placeholder=""
+          :width="'100%'"
+          />
 
-        <inputs
-        label="Endereço"
-        v-bind="address"
-        type="text"
-        placeholder=""
-        :width="'100%'"
-        />
+          <inputs
+          label="Número"
+          v-bind="number"
+          type="number"
+          placeholder=""
+          :width="'100%'"
+          />
 
-        <inputs
-        label="Número"
-        v-bind="number"
-        type="number"
-        placeholder=""
-        :width="'100%'"
-        />
+          <inputs
+          label="Complemento"
+          v-bind="complement"
+          type="text"
+          placeholder=""
+          :width="'100%'"
+          />
 
-        <inputs
-        label="Complemento"
-        v-bind="complement"
-        type="text"
-        placeholder=""
-        :width="'100%'"
-        />
+          <h2>Forma de pagamento</h2>
 
-        <h2>Forma de pagamento</h2>
+          <card-select
+          imageUrl="./imgs/Img-Icon-Cartão.png"
+          title="Cartão de Crédito"
+          description=""
+          :v-model="opcaoSelecionada"
+          :selected="isCard"
+          @click="selectCardPay('cartao')"
+          :class="{ 'selected': isCard }"
+          />
 
-        <card-select
-        imageUrl="./imgs/Img-Icon-Cartão.png"
-        title="Cartão de Crédito"
-        description=""
-        :v-model="opcaoSelecionada"
-        :selected="isCard"
-        @click="selectCardPay('cartao')"
-        :class="{ 'selected': isCard }"
-        />
+          <card-select
+          imageUrl="./imgs/Img-Icon-Dinheiro.png"
+          title="Dinheiro"
+          description=""
+          :v-model="opcaoSelecionada"
+          :selected="isMoney"
+          @click="selectCardPay('dinheiro')"
+          :class="{ 'selected': isMoney }"
+          />
 
-        <card-select
-        imageUrl="./imgs/Img-Icon-Dinheiro.png"
-        title="Dinheiro"
-        description=""
-        :v-model="opcaoSelecionada"
-        :selected="isMoney"
-        @click="selectCardPay('dinheiro')"
-        :class="{ 'selected': isMoney }"
-        />
+          <inputs
+          v-if="isMoney"
+          label="Levar troco para"
+          v-bind="change"
+          type="text"
+          placeholder=""
+          :width="'150px'"
+          />
+      </div>
+      <div class="requests">
 
-        <inputs
-        v-if="isMoney"
-        label="Levar troco para"
-        v-bind="change"
-        type="text"
-        placeholder=""
-        :width="'150px'"
-        />
+        <h2>Revisão do pedido</h2>
 
-        <card-requests
-        v-for="(card, index) in cards"
-        :key="index"
-        :image-url="card.imageUrl"
-        :title="card.title"
-        :size="card.size"
-        :border="card.border"
-        :comments="card.comments"
-        :price="card.price"
-        />
+          <card-requests
+          v-for="(card, index) in cards"
+          class="card-requests"
+          :key="index"
+          :image-url="card.imageUrl"
+          :title="card.title"
+          :size="card.size"
+          :border="card.border"
+          :comments="card.comments"
+          :price="card.price"
+          />
 
+          <div class="cardTotal">
+            <div class="textDelivery" v-if="isDelivery">
+              <h1>Entrega</h1>
+              <h2>R$ 5,00</h2>
+            </div>
+            <div class="linha" v-if="isDelivery"></div>
+            <div class="textTotal">
+              <h1>Total</h1>
+              <h2>R$ 20,00</h2>
+            </div>
+          </div>
+      </div>
+      <router-link to="/"><button class="btnAdvance">FINALIZAR PEDIDO</button></router-link>
     </main>
 </template>
 

@@ -1,23 +1,28 @@
 <template>
     <main>
-      <h2>Meus pedidos</h2>
-      <card-requests
-        v-for="(card, index) in cards"
-        :key="index"
-        :image-url="card.imageUrl"
-        :title="card.title"
-        :size="card.size"
-        :border="card.border"
-        :comments="card.comments"
-        :price="card.price"
-      />
-
-      <div class="card">
-        <div class="price">
-          <h1>Total</h1>
-          <h2 id="total">R$ {{ total }}</h2>
+      <div class="title"><h2>Meus pedidos</h2></div>
+      <div class="content">
+        <card-requests
+          v-for="(card, index) in cards"
+          :key="index"
+          :image-url="card.imageUrl"
+          :title="card.title"
+          :size="card.size"
+          :border="card.border"
+          :comments="card.comments"
+          :price="card.price"
+          text-count="Quantidade"
+          icons=""
+        />
+        <div class="card">
+          <div class="card-body">
+            <div class="price">
+              <h1>Total</h1>
+              <h2 id="total">R$ {{ total }}</h2>
+            </div>
+            <router-link to="/finalizacao-do-pedido"><button class="btnAdvance">AVANÇAR</button></router-link>
+          </div>
         </div>
-        <router-link to="/finalizacao-do-pedido"><button class="btnAdvance">AVANÇAR</button></router-link>
       </div>
     </main>
   </template>
