@@ -103,8 +103,27 @@ main .btnAdvance:hover{
 main .btnAdvance:active{
   opacity: 0.5;
 }
-@media (min-width: 900px) {
+main .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 1250px) {
     main{
         display: flex;
+        justify-content: center;
+    }
+    main .requests{
+        margin: 100px 0 0 100px;
+    }
+    main h1{
+        text-align: start;
+    }
+    main .numberEnd{
+        display: flex;
+        justify-content: space-between;
+    }
+    main .button{
+        justify-content: end;
     }
 }

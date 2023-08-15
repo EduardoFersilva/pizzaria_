@@ -46,7 +46,13 @@
           type="cep"
           placeholder=""
           :width="'100%'"
+          @input="searchAddress"
           />
+          <div
+            v-if="loading"
+            class="spinner-border text-danger spinner" role="status">
+          </div>
+          <p v-if="message.length > 0" class="error-message">{{message}}</p>
 
           <inputs
           label="Endereço"
@@ -56,6 +62,7 @@
           :width="'100%'"
           />
 
+          <div class="numberEnd">
           <inputs
           label="Número"
           v-bind="number"
@@ -71,6 +78,7 @@
           placeholder=""
           :width="'100%'"
           />
+        </div>
 
           <h2>Forma de pagamento</h2>
 
@@ -130,8 +138,10 @@
               <h2>R$ 20,00</h2>
             </div>
           </div>
+          <div class="button">
+            <router-link to="/pedido-finalizado"><button class="btnAdvance">FINALIZAR PEDIDO</button></router-link>
+          </div>
       </div>
-      <router-link to="/"><button class="btnAdvance">FINALIZAR PEDIDO</button></router-link>
     </main>
 </template>
 
@@ -139,6 +149,7 @@
 import Inputs from '../../components/Inputs/Inputs.vue'
 import CardSelect from '../../components/CardSelect/CardSelect.vue'
 import CardRequests from '../../components/CardRequests/CardRequests.vue'
+import axios from 'axios'
 
 export default {
   name: 'Checkout',

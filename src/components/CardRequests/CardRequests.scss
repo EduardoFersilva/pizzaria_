@@ -14,7 +14,7 @@
     margin: 50px 0 30px 0;
 }
 .mainRequests .card{
-    max-width: 1000px;
+    max-width: 1400px;
     background: $color-secondary;
     border-radius: 18px;
     padding: 10px;
@@ -126,7 +126,25 @@
     text-align: right;
     color: $color-primary;
 }
-@media (min-width: 896px) {
+@media (max-width: 1300px){
+    .h2Mobile{
+        font-size: 23px !important;
+    }
+}
+@media (max-width: 1249px){
+    .h2Mobile{
+        font-size: 36px !important;
+    }
+    .mainRequests .card .amount{
+        display: none;
+    }
+    .mainRequests .card .amountDesk{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+    }
+}
+@media (min-width: 1250px) {
     .mainRequests .card .card-body{
         display: flex;
         flex-direction: row;
@@ -165,20 +183,17 @@
         margin-top: 28px;
     }
     .mainRequests .card .contImg{
-        margin: 0;
+        margin: 0 20px;
     }
 }
-@media (max-width: 896px) {
-    .mainRequests .card .amount{
-        display: none;
-    }
+@media (max-width: 1250px) {
     .h2Mobile{
         display: none;
     }
-    .mainRequests .card .amountDesk{
-        display: flex;
-        justify-content: space-between;
-        align-items: end;
+}
+@media (max-width: 896px) {
+    .h2Mobile{
+        display: none;
     }
     .mainRequests .card .amountDesk h2{
         margin-bottom: 10px;

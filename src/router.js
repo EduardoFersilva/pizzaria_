@@ -16,6 +16,8 @@ import Drinks from './pages/Drinks/Drinks.vue'
 import SingleMenu from './pages/SingleMenu/SingleMenu.vue'
 import PolicyPrivacy from './pages/PolicyPrivacy/PolicyPrivacy.vue'
 import Checkout from './pages/Checkout/Checkout.vue'
+import FinishedOrder from './components/FinishedOrder/FinishedOrder.vue'
+import OrderHistory from './pages/OrderHistory/OrderHistory.vue'
 
 const routes = [
   {path: '/', component: Home},
@@ -32,7 +34,9 @@ const routes = [
   {path: '/drinks', component: Drinks},
   {path: '/cardápio-unico', component: SingleMenu},
   {path: '/politica-e-peivacidade', component: PolicyPrivacy},
-  {path: '/finalizacao-do-pedido', component: Checkout}
+  {path: '/finalizacao-do-pedido', component: Checkout},
+  {path: '/pedido-finalizado', component: FinishedOrder},
+  {path: '/historico-de-pedidos', component: OrderHistory}
 ]
 
 const router = createRouter({

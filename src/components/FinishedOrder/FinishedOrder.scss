@@ -1,0 +1,87 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+@import'../../assets/scss/button';
+
+main{
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: $color-background;
+}
+main .card{
+    background-color: $color-third;
+    border: none;
+    margin: 30px 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 18px;
+    width: 100% !important;
+    min-height: 300px;
+}
+main .card h1{
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 47px;
+    letter-spacing: 0em;
+    color: $color-secondary;
+    margin: 20px 0;
+}
+main .card .icon{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #27B94A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .buttons{
+    display: flex;
+    justify-content: space-between;
+}
+main .buttons .btnAction1{
+    @include buttonSecondary;
+    box-shadow: none;
+    height: 45px;
+    width: 200px;
+    background: $color-primary;
+    border-radius: 10px;
+}
+main .buttons .btnAction1 a{
+    color: #ffff !important;
+}
+main .buttons .btnAction1:hover{
+    transform: translateY(3px);
+}
+main .buttons .btnAction1:active{
+  opacity: 0.5;
+}
+
+main .buttons .btnAction2{
+    @include button;
+    box-shadow: none;
+    height: 45px;
+    width: 200px;
+    border-radius: 10px;
+}
+main .buttons .btnAction2:hover{
+    transform: translateY(3px);
+}
+main .buttons .btnAction2:active{
+  opacity: 0.5;
+}
+@media (max-width: 600px) {
+    main .buttons {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    main .buttons .btnAction1,.btnAction2{
+        margin: 0 0 10px 0;
+    }
+}

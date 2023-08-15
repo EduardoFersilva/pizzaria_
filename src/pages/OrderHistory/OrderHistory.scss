@@ -1,0 +1,64 @@
+@import'../../assets/scss/colors';
+@import'../../assets/scss/main.scss';
+@import'../../assets/scss/button';
+
+main{
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $color-background;
+}
+main h1{
+    margin: 30px 0;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+main .card{
+    min-height: 200px;
+    max-width: 500px;
+    min-width: 300px;
+    background: $color-secondary;
+    border: none;
+    margin: 20px 0;
+    box-shadow: rgba(0, 0, 0, 0.212) 0 0 8px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+main .card .title{
+    display: flex;
+    justify-content: space-between;
+}
+main .card .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .card h1{
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-primary;
+}
+main .card h2{
+    font-family: Roboto;
+    font-size: 20px;
+    text-align: left;
+    color: #616161;
+}
+main .card p{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+}
