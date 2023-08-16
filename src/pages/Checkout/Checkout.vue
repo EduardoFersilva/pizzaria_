@@ -149,7 +149,7 @@
 import Inputs from '../../components/Inputs/Inputs.vue'
 import CardSelect from '../../components/CardSelect/CardSelect.vue'
 import CardRequests from '../../components/CardRequests/CardRequests.vue'
-import axios from 'axios'
+import axios from './path-to-axios-file'
 
 export default {
   name: 'Checkout',
