@@ -85,7 +85,6 @@ defineProps({
                 </div>
                 <h2>R$ {{ price }}</h2>
               </div>
-
           </div>
         </div>
     </div>
@@ -99,7 +98,6 @@ export default {
   components: {
     Count
   }
-
 }
 </script>
 

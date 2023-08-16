@@ -17,6 +17,7 @@ export default {
   methods: {
     increment() {
       this.count++
+      this.$emit('count-changed', this.count)
     },
     decrement() {
       if (this.count > 1) {
