@@ -1,58 +1,72 @@
 <template>
-    <main>
-        <v-sheet
-        class="mx-auto cont"
-        elevation="8"
-        width="1258"
-        >
-        <v-slide-group
-        v-model="model"
-        class="pa-4"
-        show-arrows
-        >
-        <v-slide-group-item
-        v-for="n in 8"
-        :key="n"
-        >
-        <v-card
-        color=""
-        class='ma-4 card'
-        height="410"
-        width="260"
-        >
-        <div class="d-flex fill-height align-center justify-center card">
+  <main>
+    <h2>{{ title }}</h2>
+    <v-sheet class="mx-auto container" max-width="1210">
+      <v-slide-group :show-arrows="!isMobile" v-model="model">
+        <v-slide-group-item v-for="(item, index) in productItems" :key="index">
+          <v-card class="card" height="350" width="250" style="margin: 10px;">
             <product-card
-            image-url="./imgs/Img-Pizza-Card2.png"
-            title="Super Premium"
-            price="R$ 75.69"
-            action-url="/#/cardápio-unico"
-            action-label="FAZER PEDIDO!"
+              :image-url="item.image"
+              :title="item.title"
+              :action-url="item.actionUrl"
+              :action-label="item.actionLabel"
+              :price="item.price"
             />
-            <v-scale-transition class="contIcon">
-            <v-icon
-            color="white"
-            size="48"
-            icon="mdi-close-circle-outline"
-            ></v-icon>
-            </v-scale-transition>
-        </div>
-        </v-card>
+          </v-card>
         </v-slide-group-item>
-        </v-slide-group>
-        </v-sheet>
+      </v-slide-group>
+    </v-sheet>
+    <a class="btnSeeMenu"
+    :href="actionUrl">
+    <span>{{ actionLabel }}</span>
+    <i class="bi bi-arrow-right"></i>
+    </a>
+    <p class="pSeeMenu">São mais de 80 sabores!</p>
   </main>
 </template>
-<script>
-import ProductCard from '../ProductCard/ProductCard.vue';
 
-  export default {
-    data: () => ({
-      model: null,
-    }),
-    components:{
-        ProductCard
+<script>
+import ProductCard from '../../components/ProductCard/ProductCard.vue'
+
+export default {
+  components: {
+    ProductCard
+  },
+  props: {
+    productItems: {
+      type: Array,
+      required: true
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    actionUrl: {
+      type: String,
+      required: false
+    },
+    actionLabel: {
+      type: String,
+      required: false
     }
+  },
+  data: () => ({
+    model: null,
+    isMobile: false
+  }),
+  methods: {
+    checkIsMobile() {
+      this.isMobile = window.innerWidth <= 680
+    }
+  },
+  mounted() {
+    this.checkIsMobile()
+    window.addEventListener('resize', this.checkIsMobile)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.checkIsMobile)
   }
+}
 </script>
 
 <style src="./SliderVuetify.scss" lang="scss" scoped />

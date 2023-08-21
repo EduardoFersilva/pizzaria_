@@ -11,7 +11,8 @@
       video-url="http://www.google.com"
       video-label="ASSISTIR VÍDEO"
     />
-    <slider
+
+    <slider-vuetify
     title="O que vai ser hoje?"
     :productItems="productItems"
     action-url="/#/pizzas-salgadas"
@@ -64,6 +65,7 @@ import Revenue from '../../components/Revenue/Revenue.vue'
 import SliderCircle from '../../components/SliderCircle/SliderCircle.vue'
 import BannerEnd from '../../components/BannerEnd/BannerEnd.vue'
 import SliderReviews from '../../components/SliderReviews/SliderReviews.vue'
+import SliderVuetify from '../../components/SliderVuetify/SliderVuetify.vue'
 
 export default {
   name: 'Home',
@@ -73,48 +75,63 @@ export default {
     Revenue,
     SliderCircle,
     BannerEnd,
-    SliderReviews
+    SliderReviews,
+    SliderVuetify
   },
   data() {
     return {
       productItems: [
         {
-          productName: 'Muzzarela de Búfala',
+          title: 'Muzzarela de Búfala',
           price: '65',
           image: './imgs/Img-Pizza-Card1.png',
           actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
-          productName: 'Super Premium',
+          title: 'Super Premium',
           price: '75.5',
           image: './imgs/Img-Pizza-Card2.png',
           actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
-          productName: 'Super Premium',
+          title: 'Super Premium',
           price: '75.69',
           image: './imgs/Img-Pizza-Card3.png',
           actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
-          productName: 'Caprici',
+          title: 'Caprici',
           price: '49.99',
           image: './imgs/Img-Pizza-Card4.png',
           actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
-          productName: 'Muzzarela de Búfala',
+          title: 'Muzzarela de Búfala',
           price: '65.15',
           image: './imgs/Img-Pizza-Card1.png',
           actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
-          productName: 'Muzzarela de Búfala',
+          title: 'Muzzarela de Búfala',
+          price: '65.15',
+          image: './imgs/Img-Pizza-Card2.png',
+          actionUrl: '/#/cardápio-unico',
+          actionLabel: 'FAZER PEDIDO!'
+        },
+        {
+          title: 'Muzzarela de Búfala',
+          price: '65.15',
+          image: './imgs/Img-Pizza-Card1.png',
+          actionUrl: '/#/cardápio-unico',
+          actionLabel: 'FAZER PEDIDO!'
+        },
+        {
+          title: 'Muzzarela de Búfala',
           price: '65.15',
           image: './imgs/Img-Pizza-Card2.png',
           actionUrl: '/#/cardápio-unico',

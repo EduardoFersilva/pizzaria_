@@ -2,7 +2,6 @@
 import Header from './components/Header/Header.vue'
 import Home from './pages/Home/Home.vue'
 import Footer from './components/Footer/Footer.vue'
-import SliderVuetify from './components/SliderVuetify/SliderVuetify.vue'
 </script>
 
 <template>
@@ -40,8 +39,7 @@ export default {
   components: {
     Header,
     Home,
-    Footer,
-    SliderVuetify
+    Footer
   }
 }
 </script>

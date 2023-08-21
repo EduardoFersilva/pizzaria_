@@ -10,14 +10,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 10px;
+    margin: 0;
     height: 400px;
     width: 250px;
     border-radius: 18px;
 }
 .card img{
     height: 140px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .card h1{
     font-family: Roboto;
@@ -42,6 +42,8 @@
 .btnRequests{
     @include button;
      margin-top: 20px;
+     max-width: 160px;
+     max-height: 45px;
 }
 .btnRequests:hover{
     transform: translateY(3px);

@@ -3,33 +3,82 @@
 
 main{
     background: $color-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-main .cont{
-    background: $color-background !important;
-    box-shadow: none !important;
+.container{
+    background: $color-background;
+    width: 100%;
+    margin: 50px 0;
 }
-main .cont .card{
-    box-shadow: none;
-    border: none;
+.card{
     background: $color-secondary;
+    border: none;
+    box-shadow: none;
     border-radius: 18px;
 }
-.pa-4{
-    padding: 10px 0 !important;
-}   
-
-@media (max-width: 1290px){
-    main .cont{
-        width: 980px  !important;
+main h2{
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 30px;
+}
+.btnSeeMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    border-radius: 18px;
+    border: none;
+    background: $color-primary;
+    color: $color-secondary;
+    box-shadow: 10px 10px 40px #b9202091;
+    padding: 10px 20px;
+    margin: 0 0 20px 0;
+  }
+  
+  .btnSeeMenu > i {
+    margin-left: 5px;
+    transition: all 0.3s ease-in;
+  }
+  
+  .btnSeeMenu:hover > i {
+    font-size: 1em;
+    transform: translateX(6px);
+  }
+  
+  .btnSeeMenu:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
+  .pSeeMenu{
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 27px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: $color-primary;
+  }
+@media (max-width:1200px) {
+    .container{
+        max-width: 930px !important;
     }
 }
-@media (max-width: 1000px){
-    main .cont{
-        width: 685px  !important;
+@media (max-width:940px) {
+    .container{
+        max-width: 670px !important;
     }
 }
-@media (max-width: 700px){
-    main .cont{
-        width: 400px  !important;
+@media (max-width:680px) {
+    .container{
+        max-width: 399px !important;
+        padding: 0;
     }
 }
