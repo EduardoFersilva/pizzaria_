@@ -1,10 +1,10 @@
 <template>
   <main>
     <h2>{{ title }}</h2>
-    <v-sheet class="mx-auto container" max-width="1210">
+    <v-sheet class="mx-auto container" max-width="1290">
       <v-slide-group :show-arrows="!isMobile" v-model="model">
         <v-slide-group-item v-for="(item, index) in productItems" :key="index">
-          <v-card class="card" height="350" width="250" style="margin: 10px;">
+          <v-card class="card" style="margin: 10px;">
             <product-card
               :image-url="item.image"
               :title="item.title"
@@ -56,7 +56,7 @@ export default {
   }),
   methods: {
     checkIsMobile() {
-      this.isMobile = window.innerWidth <= 680
+      this.isMobile = window.innerWidth <= 720
     }
   },
   mounted() {
