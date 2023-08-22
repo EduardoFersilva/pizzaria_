@@ -16,10 +16,13 @@ main{
     justify-content: center;
 }
 .card{
-    background: $color-secondary;
+    background: $color-background;
     border: none;
     box-shadow: none;
     border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 main h2{
     font-family: Roboto;
@@ -37,16 +40,16 @@ main h2{
 }
 @media (max-width:1000px) {
     .container{
-        max-width: 710px !important;
+        max-width: 800px !important;
     }
 }
-@media (max-width:720px) {
+@media (max-width:800px) {
     .container{
-        max-width: 480px !important;
+        max-width: 610px !important;
         padding: 0;
     }
 }
-@media (max-width:490px) {
+@media (max-width:610px) {
     .container{
         width: 100% !important;
         padding: 0;

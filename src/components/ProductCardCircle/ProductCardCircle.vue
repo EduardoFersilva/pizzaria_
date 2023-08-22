@@ -17,11 +17,11 @@ defineProps({
 </script>
 
 <template>
-  <div class="cont">
-    <img :href=actionUrl :src="imageUrl" :alt="title">
-    <h1>{{ title }}</h1>
-  </div>
-</template>
+    <a :href="actionUrl" class="cont">
+      <img :src="imageUrl" :alt="title">
+      <h1>{{ title }}</h1>
+    </a>
+  </template>
 
 <script>
 export default {

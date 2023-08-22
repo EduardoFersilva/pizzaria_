@@ -41,7 +41,7 @@ export default {
   }),
   methods: {
     checkIsMobile() {
-      this.isMobile = window.innerWidth <= 490
+      this.isMobile = window.innerWidth <= 610
     }
   },
   mounted() {
