@@ -1,22 +1,30 @@
 <template>
   <main>
     <h2>{{ title }}</h2>
-    <div ref="container" class="keen-slider">
-      <div v-for="(item, index) in productItemsCircle" :key="index" class="keen-slider__slide number-slide1">
-        <img :src="item.image" :alt="item.productName">
-        <a :href="item.actionUrl"></a>
-        <h1>{{ item.productName }}</h1>
-      </div>
-    </div>
+    <v-sheet class="mx-auto container" max-width="1000">
+      <v-slide-group :show-arrows="!isMobile" v-model="model">
+        <v-slide-group-item v-for="(item, index) in productItemsCircle" :key="index">
+          <v-card class="card" style="margin: 10px;">
+            <product-card-circle
+              :image-url="item.image"
+              :title="item.title"
+              :action-url="item.actionUrl"
+            />
+          </v-card>
+        </v-slide-group-item>
+      </v-slide-group>
+    </v-sheet>
   </main>
 </template>
 
 <script>
-import {useKeenSlider} from 'keen-slider/vue.es'
-import 'keen-slider/keen-slider.min.css'
+import ProductCardCircle from '../ProductCardCircle/ProductCardCircle.vue'
 
 export default {
   name: 'SliderCircle',
+  components: {
+    ProductCardCircle
+  },
   props: {
     productItemsCircle: {
       type: Array,
@@ -27,25 +35,21 @@ export default {
       required: true
     }
   },
-  setup() {
-    const [container] = useKeenSlider({
-      breakpoints: {
-        '(min-width: 320px)': {
-          slides: {perView: 1, spacing: 0}
-        },
-        '(min-width: 600px)': {
-          slides: {perView: 3, spacing: 10}
-        },
-        '(min-width: 890px)': {
-          slides: {perView: 4, spacing: 10}
-        },
-        '(min-width: 1201px)': {
-          slides: {perView: 5, spacing: 0}
-        }
-      },
-      slides: {perView: 1}
-    })
-    return {container}
+  data: () => ({
+    model: null,
+    isMobile: false
+  }),
+  methods: {
+    checkIsMobile() {
+      this.isMobile = window.innerWidth <= 490
+    }
+  },
+  mounted() {
+    this.checkIsMobile()
+    window.addEventListener('resize', this.checkIsMobile)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.checkIsMobile)
   }
 }
 </script>
