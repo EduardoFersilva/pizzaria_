@@ -170,6 +170,10 @@ export default {
       loading: false,
       message: '',
       showModal: false,
+      phone: '',
+      cep: '',
+      number: '',
+      complement: '',
       cards: [
         {
           imageUrl: '/imgs/Img-Pizza-Card4.png',

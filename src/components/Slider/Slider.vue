@@ -1,31 +1,37 @@
 <template>
-  <div class="contt">
   <main>
     <h2>{{ title }}</h2>
-    <div ref="container" class="keen-slider">
-      <div v-for="(item, index) in productItems" :key="index" class="keen-slider__slide number-slide1">
-        <img :src="item.image" :alt="item.productName">
-        <h1>{{ item.productName }}</h1>
-        <p>{{ priceFormatted(item.price) }}</p>
-        <a class="btnAction" :href="item.actionUrl">{{ item.actionLabel }}</a>
-      </div>
-    </div>
-  </main>
+    <v-sheet class="mx-auto container" max-width="1290">
+      <v-slide-group :show-arrows="!isMobile" v-model="model">
+        <v-slide-group-item v-for="(item, index) in productItems" :key="index">
+          <v-card class="card" style="margin: 10px;">
+            <product-card
+              :image-url="item.image"
+              :title="item.title"
+              :action-url="item.actionUrl"
+              :action-label="item.actionLabel"
+              :price="item.price"
+            />
+          </v-card>
+        </v-slide-group-item>
+      </v-slide-group>
+    </v-sheet>
     <a class="btnSeeMenu"
     :href="actionUrl">
     <span>{{ actionLabel }}</span>
     <i class="bi bi-arrow-right"></i>
     </a>
     <p class="pSeeMenu">São mais de 80 sabores!</p>
-    </div>
+  </main>
 </template>
 
 <script>
-import {useKeenSlider} from 'keen-slider/vue.es'
-import 'keen-slider/keen-slider.min.css'
+import ProductCard from '../../components/ProductCard/ProductCard.vue'
 
 export default {
-  namea: 'Slider',
+  components: {
+    ProductCard
+  },
   props: {
     productItems: {
       type: Array,
@@ -44,41 +50,21 @@ export default {
       required: false
     }
   },
-  computed: {
-    priceFormatted() {
-      return (price) => {
-        const value = parseFloat(price)
-        if (isNaN(value)) {
-          return price
-        }
-        const formatter = new Intl.NumberFormat('pt-BR', {
-          style: 'currency',
-          currency: 'BRL'
-        })
-        return formatter.format(value)
-      }
+  data: () => ({
+    model: null,
+    isMobile: false
+  }),
+  methods: {
+    checkIsMobile() {
+      this.isMobile = window.innerWidth <= 720
     }
   },
-
-  setup() {
-    const [container] = useKeenSlider({
-      breakpoints: {
-        '(min-width: 320px)': {
-          slides: {perView: 1, spacing: 25}
-        },
-        '(min-width: 600px)': {
-          slides: {perView: 2, spacing: 20}
-        },
-        '(min-width: 890px)': {
-          slides: {perView: 3, spacing: 20}
-        },
-        '(min-width: 1200px)': {
-          slides: {perView: 4, spacing: 20}
-        }
-      },
-      slides: {perView: 1}
-    })
-    return {container}
+  mounted() {
+    this.checkIsMobile()
+    window.addEventListener('resize', this.checkIsMobile)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.checkIsMobile)
   }
 }
 </script>

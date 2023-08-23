@@ -12,7 +12,7 @@
       video-label="ASSISTIR VÍDEO"
     />
 
-    <slider-vuetify
+    <slider
     title="O que vai ser hoje?"
     :productItems="productItems"
     action-url="/#/pizzas-salgadas"
@@ -51,9 +51,9 @@
     action-label="SAIBA MAIS"
     />
 
-  <slider-reviews
-  :assessments="assessments"
-  />
+    <slider-reviews
+    :assessments="assessments"
+    />
 
   </main>
 </template>
@@ -65,7 +65,6 @@ import Revenue from '../../components/Revenue/Revenue.vue'
 import SliderCircle from '../../components/SliderCircle/SliderCircle.vue'
 import BannerEnd from '../../components/BannerEnd/BannerEnd.vue'
 import SliderReviews from '../../components/SliderReviews/SliderReviews.vue'
-import SliderVuetify from '../../components/SliderVuetify/SliderVuetify.vue'
 
 export default {
   name: 'Home',
@@ -75,8 +74,7 @@ export default {
     Revenue,
     SliderCircle,
     BannerEnd,
-    SliderReviews,
-    SliderVuetify
+    SliderReviews
   },
   data() {
     return {

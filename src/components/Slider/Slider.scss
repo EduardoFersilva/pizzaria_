@@ -1,15 +1,23 @@
 @import'../../assets/scss/colors';
 @import'../../assets/scss/main.scss';
-@import'../../assets/scss/button';
 
 main{
+    background: $color-background;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 0px;
-    background: #F6F6F6;
-    min-height: 500px;
+}
+.container{
+    background: $color-background;
+    width: 100%;
+    margin: 50px 0;
+}
+.card{
+    background: $color-secondary;
+    border: none;
+    box-shadow: none;
+    border-radius: 18px;
 }
 main h2{
     font-family: Roboto;
@@ -18,130 +26,59 @@ main h2{
     line-height: 47px;
     letter-spacing: 0em;
     text-align: center;
-    margin: 20px 0 30px 0;
-}
-.keen-slider{
-    width: 1100px;
-    max-height: 700px;  
-}
-
-[class^="number-slide"],
-[class*=" number-slide"] {
-  background: grey;
- 
-}
-.number-slide1 {
-    border-radius: 18px;
-    border: none;
-    background: $color-secondary;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
-    height: 410px;
-}
-.number-slide1 img{
-    height: 180px;
-}
-.number-slide1 h1{
-    font-family: Roboto;
-    font-size: 18px;
-    font-weight: 900;
-    line-height: 23px;
-    letter-spacing: 0em;
-    text-align: center;
-    margin: 10px 0;
-}
-.number-slide1 p{
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 27px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: $color-primary;
-    margin: 0 0 10px 0;
-    
-}
-.btnAction{
-    @include button;
-    width: 170px;
-    margin: 10px 0;
-}
-.btnAction:hover{
-    transform: translateY(3px);
-    box-shadow: none;
-}
-.btnAction:active{
-  opacity: 0.5;
-}
-
-.contt{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: $color-background;
-    padding-bottom: 20px;
+    margin-top: 50px;
 }
 .btnSeeMenu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s linear;
-  border-radius: 18px;
-  border: none;
-  background: $color-primary;
-  color: $color-secondary;
-  box-shadow: 10px 10px 40px #b9202091;
-  padding: 10px 20px;
-  margin: 0 0 20px 0;
-}
-
-.btnSeeMenu > i {
-  margin-left: 5px;
-  transition: all 0.3s ease-in;
-}
-
-.btnSeeMenu:hover > i {
-  font-size: 1em;
-  transform: translateX(6px);
-}
-
-.btnSeeMenu:hover {
-  transform: translateY(3px);
-  box-shadow: none;
-}
-.pSeeMenu{
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 27px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: $color-primary;
-}
-
-@media (max-width: 1200px) {
-    .keen-slider{
-        width: 825px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    border-radius: 18px;
+    border: none;
+    background: $color-primary;
+    color: $color-secondary;
+    box-shadow: 10px 10px 40px #b9202091;
+    padding: 10px 20px;
+    margin: 0 0 20px 0;
+  }
+  
+  .btnSeeMenu > i {
+    margin-left: 5px;
+    transition: all 0.3s ease-in;
+  }
+  
+  .btnSeeMenu:hover > i {
+    font-size: 1em;
+    transform: translateX(6px);
+  }
+  
+  .btnSeeMenu:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
+  .pSeeMenu{
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 27px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: $color-primary;
+  }
+@media (max-width:1295px) {
+    .container{
+        max-width: 995px !important;
     }
 }
-@media (max-width: 890px) {
-    .keen-slider{
-        width: 545px;
+@media (max-width:1000px) {
+    .container{
+        max-width: 710px !important;
     }
 }
-@media (max-width: 600px) {
-    .keen-slider{
-        width: 270px;
-    }
-}
-@media (max-width: 380px) {
-    main h2{
-        font-size: 30px;
+@media (max-width:720px) {
+    .container{
+        width: 100% !important;
+        padding: 0;
     }
 }

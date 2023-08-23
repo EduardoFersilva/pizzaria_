@@ -17,7 +17,7 @@ defineProps({
     required: true
   },
   border: {
-    type: Number,
+    type: String,
     required: false
   },
   comments: {
@@ -25,7 +25,7 @@ defineProps({
     required: true
   },
   price: {
-    type: Number,
+    type: String,
     required: true
   },
   textCount: {
