@@ -1,11 +1,11 @@
 <template>
     <main>
       <v-carousel
-      cycle max-height="500"
+      cycle max-height="400"
       hide-delimiter-background
-      show-arrows="hover"
+      :show-arrows="false"
       style="color: #DF3D29;
-      margin-bottom: 50px;"
+      margin-bottom: 40px;"
       >
         <v-carousel-item v-for="(item, index) in assessments" :key="index">
           <v-sheet height="100%">

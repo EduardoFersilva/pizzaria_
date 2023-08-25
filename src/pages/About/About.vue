@@ -13,14 +13,16 @@
                 <img src="/imgs/Img-Senhora.png" alt="" class="imgSenhora">
             </div>
         </div>
-        <div class="card">
-            <img src="/imgs/Img-Card-Sobre.jpeg" alt="">
-            <h1>A mais tradicional pizzaria do ABC</h1>
-            <p>A Senhora Pizza é uma pizzaria renomada localizada na região do ABC,
-            que está no mercado desde 1963 oferecendo as melhores pizzas da região.
-            Com ingredientes frescos e selecionados, massa artesanal e um atendimento de excelência,
-            a Senhora Pizza é o lugar perfeito para quem busca uma experiência
-            gastronômica única e saborosa.</p>
+        <div class="contCard">
+          <div class="card">
+              <img src="/imgs/Img-Card-Sobre.jpeg" alt="">
+              <h1>A mais tradicional pizzaria do ABC</h1>
+              <p>A Senhora Pizza é uma pizzaria renomada localizada na região do ABC,
+              que está no mercado desde 1963 oferecendo as melhores pizzas da região.
+              Com ingredientes frescos e selecionados, massa artesanal e um atendimento de excelência,
+              a Senhora Pizza é o lugar perfeito para quem busca uma experiência
+              gastronômica única e saborosa.</p>
+          </div>
         </div>
         <banner-end
         image-url="/imgs/Img-BannerEnd.png"
@@ -81,42 +83,42 @@ export default {
     return {
       productItems: [
         {
-          productName: 'Muzzarela de Búfala',
+          title: 'Muzzarela de Búfala',
           price: '65',
           image: './imgs/Img-Pizza-Card1.png',
           actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
-          productName: 'Super Premium',
+          title: 'Super Premium',
           price: '75.5',
           image: './imgs/Img-Pizza-Card2.png',
           actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
-          productName: 'Super Premium',
+          title: 'Super Premium',
           price: '75.69',
           image: './imgs/Img-Pizza-Card3.png',
           actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
-          productName: 'Caprici',
+          title: 'Caprici',
           price: '49.99',
           image: './imgs/Img-Pizza-Card4.png',
           actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
-          productName: 'Muzzarela de Búfala',
+          title: 'Muzzarela de Búfala',
           price: '65.15',
           image: './imgs/Img-Pizza-Card1.png',
           actionUrl: '/#/cardápio-unico',
           actionLabel: 'FAZER PEDIDO!'
         },
         {
-          productName: 'Muzzarela de Búfala',
+          title: 'Muzzarela de Búfala',
           price: '65.15',
           image: './imgs/Img-Pizza-Card2.png',
           actionUrl: '/#/cardápio-unico',

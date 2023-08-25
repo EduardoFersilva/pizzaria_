@@ -1265,11 +1265,6 @@ json5@^1.0.2:
   dependencies:
     minimist "^1.2.0"
 
-keen-slider@^6.8.6:
-  version "6.8.6"
-  resolved "https://registry.npmjs.org/keen-slider/-/keen-slider-6.8.6.tgz"
-  integrity sha512-dcEQ7GDBpCjUQA8XZeWh3oBBLLmyn8aoeIQFGL/NTVkoEOsmlnXqA4QykUm/SncolAZYGsEk/PfUhLZ7mwMM2w==
-
 levn@^0.4.1:
   version "0.4.1"
   resolved "https://registry.npmjs.org/levn/-/levn-0.4.1.tgz"

@@ -9,7 +9,6 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 main .banner{
     width: 100%;
@@ -47,7 +46,11 @@ main .banner .secondBanner .imgSenhora{
     height: 300px;
     margin: 20px 0 0 0;
 }
-
+main .contCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 main .card{
     display: flex;
     flex-direction: column;
